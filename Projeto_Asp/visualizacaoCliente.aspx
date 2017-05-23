@@ -38,6 +38,9 @@
 &nbsp;<asp:TextBox ID="TextBox5" runat="server" Height="175px" TextMode="MultiLine" Width="418px"></asp:TextBox>
         <br />
         <br />
+        <center><asp:Button ID="Button2" runat="server" Text="Button" />
+            <asp:Button ID="Button3" runat="server" Text="Button" />
+        </center>
         
     </div>
     </form>
