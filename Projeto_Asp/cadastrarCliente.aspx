@@ -36,9 +36,10 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Novo" />
 &nbsp;
-        <asp:Button ID="Button2" runat="server" Text="Salvar" />
+        <asp:Button ID="Button2" runat="server" Text="Salvar" OnClick="Button2_Click" />
 &nbsp;
-        <asp:Button ID="Button3" runat="server" Text="Cancelar" />
+        <asp:Button ID="Button3" runat="server" Text="Cancelar" OnClick="Button3_Click" />
+        &nbsp;<asp:Label ID="Label6" runat="server"></asp:Label>
         <br />
         <br />
     
