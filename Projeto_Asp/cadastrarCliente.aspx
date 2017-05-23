@@ -26,7 +26,7 @@
         <br />
         <br />
         <asp:Label ID="Label4" runat="server" Text="Celular:"></asp:Label>
-&nbsp;<asp:TextBox ID="txtCelular" runat="server" Enabled="False" Width="186px"></asp:TextBox>
+&nbsp;<asp:TextBox ID="txtCelular" runat="server" Enabled="False" Width="120px"></asp:TextBox>
         <br />
         <br />
         <asp:Label ID="Label5" runat="server" Text="Obs:"></asp:Label>
