@@ -58,6 +58,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="cadastrarCliente.aspx" />
+    <Content Include="cadastroViagem.aspx" />
     <Content Include="home.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -68,6 +69,13 @@
     </Compile>
     <Compile Include="cadastrarCliente.aspx.designer.cs">
       <DependentUpon>cadastrarCliente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cadastroViagem.aspx.cs">
+      <DependentUpon>cadastroViagem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cadastroViagem.aspx.designer.cs">
+      <DependentUpon>cadastroViagem.aspx</DependentUpon>
     </Compile>
     <Compile Include="home.aspx.cs">
       <DependentUpon>home.aspx</DependentUpon>
