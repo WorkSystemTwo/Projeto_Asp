@@ -60,6 +60,7 @@
     <Content Include="cadastrarCliente.aspx" />
     <Content Include="cadastroViagem.aspx" />
     <Content Include="home.aspx" />
+    <Content Include="visualizacaoCliente.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -85,6 +86,13 @@
       <DependentUpon>home.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="visualizacaoCliente.aspx.cs">
+      <DependentUpon>visualizacaoCliente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="visualizacaoCliente.aspx.designer.cs">
+      <DependentUpon>visualizacaoCliente.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="Web.Debug.config">

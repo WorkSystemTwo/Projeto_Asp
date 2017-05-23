@@ -26,19 +26,21 @@
         <br />
         <br />
         <asp:Label ID="Label4" runat="server" Text="Celular:"></asp:Label>
-&nbsp;<asp:TextBox ID="txtCelular" runat="server" Enabled="False" Width="186px"></asp:TextBox>
+&nbsp;<asp:TextBox ID="txtCelular" runat="server" Enabled="False" Width="120px"></asp:TextBox>
         <br />
         <br />
         <asp:Label ID="Label5" runat="server" Text="Obs:"></asp:Label>
 &nbsp;<asp:TextBox ID="txtObs" runat="server" Enabled="False" Height="236px" TextMode="MultiLine" Width="432px"></asp:TextBox>
         <br />
         <br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Novo" />
+        <center><asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Novo" />
+
+        <asp:Button ID="Button2" runat="server" Text="Salvar" OnClick="Button2_Click" />
 &nbsp;
-        <asp:Button ID="Button2" runat="server" Text="Salvar" />
-&nbsp;
-        <asp:Button ID="Button3" runat="server" Text="Cancelar" />
+        <asp:Button ID="Button3" runat="server" Text="Cancelar" OnClick="Button3_Click" />
+        <asp:Label ID="Label6" runat="server"></asp:Label>
+        </center>
+        
         <br />
         <br />
     
