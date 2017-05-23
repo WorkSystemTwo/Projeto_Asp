@@ -1,0 +1,31 @@
+Cliente
+
+cpf_cliente PK
+nome 
+rg
+celular
+obs 
+
+CRIAR TELA CLIENTE - THIAGO
+
+Viagem
+
+id_viagem PK
+origem
+destino
+data_saída
+hr_saída
+prev_chegada
+obs
+
+CRIAR TELA VIAGEM - JOÃO
+CRIAR TELA INICIAL - JOÃO
+
+Passagem
+
+id_passagem PK
+id_viagem FK
+cpf_cliente FK
+poltrona
+
+CRIAR TELA PASSAGEM - THIAGO
