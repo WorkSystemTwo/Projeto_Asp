@@ -8,7 +8,7 @@
 </head>
 <body>
     <form id="form1" runat="server">
-    <div style="height: 438px">
+    <div style="height: 515px">
     
         <center><h3>Consulta Cliente</h3></center>
         
@@ -36,6 +36,7 @@
         <br />
         <asp:Label ID="Label7" runat="server" Text="Obs:"></asp:Label>
 &nbsp;<asp:TextBox ID="TextBox5" runat="server" Height="175px" TextMode="MultiLine" Width="418px"></asp:TextBox>
+        <br />
         <br />
         
     </div>
