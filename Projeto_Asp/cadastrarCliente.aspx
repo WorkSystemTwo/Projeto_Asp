@@ -10,9 +10,9 @@
     <form id="form1" runat="server">
     <div style="height: 559px">
     
-    &nbsp;&nbsp;&nbsp;&nbsp;
+    
         <br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b> Cadastro Cliente </b><br />
+<center><b> Cadastro Cliente </b><br /></center>
         <br />
         <asp:Label ID="Label1" runat="server" Text="CPF:"></asp:Label>
 &nbsp;<asp:TextBox ID="txtCpf" runat="server" Enabled="False" Width="142px"></asp:TextBox>
@@ -35,10 +35,9 @@
         <br />
         <center><asp:Button ID="btnNovo" runat="server" OnClick="Button1_Click" Text="Novo" />
 
-        <asp:Button ID="btnSalvar" runat="server" Text="Salvar" OnClick="Button2_Click" />
-&nbsp;
-        <asp:Button ID="btnCancelar" runat="server" Text="Cancelar" OnClick="Button3_Click" />
-        <asp:Label ID="Label6" runat="server"></asp:Label>
+        &nbsp;<asp:Button ID="btnSalvar" runat="server" Text="Salvar" OnClick="Button2_Click" />
+&nbsp;<asp:Button ID="btnCancelar" runat="server" Text="Cancelar" OnClick="Button3_Click" />
+        &nbsp;<asp:Label ID="Label6" runat="server"></asp:Label>
         </center>
         
         <br />
