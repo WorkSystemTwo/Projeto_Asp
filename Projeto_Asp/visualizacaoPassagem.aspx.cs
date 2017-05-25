@@ -16,13 +16,25 @@ namespace Projeto_Asp
 
         protected void btnEditar_Click(object sender, EventArgs e)
         {
-            txtCodPassagem.Enabled = txtCodViagem.Enabled = txtCpf.Enabled = true;
+            txtCodPassagem.Enabled = txtCodViagem.Enabled = txtCpf.Enabled = txtPoltrona.Enabled = true;
         }
 
         protected void btnCancelar_Click(object sender, EventArgs e)
         {
-            txtCodPassagem.Text = txtCodViagem.Text = txtCpf.Text = "";
-            txtCodPassagem.Enabled = txtCodViagem.Enabled = txtCpf.Enabled = false;
+            Limpar();
+            desabilitar();
+        }
+        private void Limpar()
+        {
+            txtCodPassagem.Text = txtCodViagem.Text = txtCpf.Text = txtPoltrona.Text = "";
+        }
+        private void desabilitar()
+        {
+            txtCodPassagem.Enabled = txtCodViagem.Enabled = txtCpf.Enabled = txtPoltrona.Enabled = false;
+        }
+        private void Habilitar()
+        {
+            txtCodPassagem.Enabled = txtCodViagem.Enabled = txtCpf.Enabled = txtPoltrona.Enabled = false;
         }
     }
 }

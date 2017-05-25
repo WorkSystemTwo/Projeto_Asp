@@ -30,7 +30,7 @@
              <asp:TextBox ID="txtCpf" runat="server" Width="149px" Enabled="False"></asp:TextBox>
         &nbsp;
              <asp:Label ID="Label12" runat="server" Text="Poltrona:"></asp:Label>
-&nbsp;<asp:TextBox ID="TextBox3" runat="server" Enabled="False"></asp:TextBox>
+&nbsp;<asp:TextBox ID="txtPoltrona" runat="server" Enabled="False"></asp:TextBox>
  
     <br>
             <br>
