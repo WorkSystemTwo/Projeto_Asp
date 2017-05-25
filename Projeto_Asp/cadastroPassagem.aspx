@@ -44,7 +44,7 @@
         &nbsp;
         <asp:TextBox ID="txtNomeCliente" runat="server" ReadOnly="true" Width="316px" Enabled="False"></asp:TextBox>
         &nbsp;
-        <asp:Button ID="btnVerificar" runat="server" Text="Verificar" />
+        <asp:Button ID="btnVerificar" runat="server" Text="Verificar Cliente" />
         <br />
         <br />
         <asp:Label ID="Label5" runat="server" Text="Confirmar CPF : " Visible="False"></asp:Label>
