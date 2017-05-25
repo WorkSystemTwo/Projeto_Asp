@@ -42,6 +42,9 @@
         <asp:Label ID="Label7" runat="server" Text="Observação : "></asp:Label>
         <asp:TextBox ID="txtObs" runat="server" Height="95px" TextMode="MultiLine" Width="391px"></asp:TextBox>
 
+        <br />
+        <br />
+
         <center> 
             
             <asp:Button ID="btnNovo" runat="server" Text="Novo" Width="87px"></asp:Button>
@@ -49,6 +52,10 @@
             &nbsp;
 
             <asp:Button ID="btnCadastrar" runat="server" Text="Cadastrar"></asp:Button> 
+
+            &nbsp;
+
+            <asp:Button ID="btnCancelar" runat="server" Text="Cancelar" /></asp:Button>
             
         </center>
 
