@@ -38,7 +38,7 @@
 
         <br />
         
-            <b> <a href=""> - Nova Passagem</a></b>
+            <b> <a href="cadastroPassagem.aspx"> - Nova Passagem</a></b>
 
         <br />
 
