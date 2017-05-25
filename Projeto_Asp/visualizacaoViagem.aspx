@@ -1,11 +1,12 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="cadastroViagem.aspx.cs" Inherits="Projeto_Asp.cadastroViagem" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="visualizacaoViagem.aspx.cs" Inherits="Projeto_Asp.visualizacaoViagem" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head runat="server">
 
-    <title>Cadastro de Viagem</title>
+    <title>Gerenciar Viagem</title>
 
 </head>
 
@@ -15,14 +16,25 @@
 
     <div>
     
-            <center><h3> CADASTRAR VIAGEM</h3></center>
+            <center> <h3> GERENCIAR VIAGEM</h3></center>
+
+            <br />
+            <br />
+            <br />
+
+        <b>
+        <asp:Label ID="Label8" runat="server" Text="Pesquisa por Nome:"></asp:Label>
+         &nbsp;
+        <asp:TextBox ID="txtPesquisa" runat="server" Width="406px"></asp:TextBox>
+         &nbsp;
+        <asp:Button ID="btnPesquisar" runat="server" Text="Pesquisar" BorderStyle="None" Height="28px" />
+        </b>
 
         <br />
         <br />
-        <br />
-
+        
         <asp:Label ID="Label1" runat="server" Text="ID Viagem : "></asp:Label>
-        <asp:TextBox ID="txtIdViagem" runat="server" ReadOnly="True" Width="108px"></asp:TextBox>
+        <asp:TextBox ID="txtIdViagem" runat="server" ReadOnly="True" Width="108px" Enabled="False"></asp:TextBox>
             <br />
         <br />
         <asp:Label ID="Label2" runat="server" Text="Cidade Origem : "></asp:Label>
@@ -51,11 +63,11 @@
 
         <center> 
             
-            <asp:Button ID="btnNovo" runat="server" Text="Novo" Width="87px" BorderStyle="None" Height="25px"></asp:Button>
+            <asp:Button ID="btnAlterar" runat="server" Text="Alterar" Width="87px" BorderStyle="None" Height="25px"></asp:Button>
 
             &nbsp;
 
-            <asp:Button ID="btnCadastrar" runat="server" Text="Cadastrar" BorderStyle="None" Height="25px" Enabled="False"></asp:Button> 
+            <asp:Button ID="btnSalvar" runat="server" Text="Salvar" BorderStyle="None" Height="25px" Enabled="False" Width="63px"></asp:Button> 
 
             &nbsp;
 

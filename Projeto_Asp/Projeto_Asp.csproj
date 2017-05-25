@@ -61,6 +61,7 @@
     <Content Include="cadastroViagem.aspx" />
     <Content Include="home.aspx" />
     <Content Include="visualizacaoCliente.aspx" />
+    <Content Include="visualizacaoViagem.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -92,6 +93,13 @@
     </Compile>
     <Compile Include="visualizacaoCliente.aspx.designer.cs">
       <DependentUpon>visualizacaoCliente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="visualizacaoViagem.aspx.cs">
+      <DependentUpon>visualizacaoViagem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="visualizacaoViagem.aspx.designer.cs">
+      <DependentUpon>visualizacaoViagem.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
