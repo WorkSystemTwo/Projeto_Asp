@@ -33,11 +33,11 @@
 &nbsp;<asp:TextBox ID="txtObs" runat="server" Enabled="False" Height="236px" TextMode="MultiLine" Width="432px"></asp:TextBox>
         <br />
         <br />
-        <center><asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Novo" />
+        <center><asp:Button ID="btnNovo" runat="server" OnClick="Button1_Click" Text="Novo" />
 
-        <asp:Button ID="Button2" runat="server" Text="Salvar" OnClick="Button2_Click" />
+        <asp:Button ID="btnSalvar" runat="server" Text="Salvar" OnClick="Button2_Click" />
 &nbsp;
-        <asp:Button ID="Button3" runat="server" Text="Cancelar" OnClick="Button3_Click" />
+        <asp:Button ID="btnCancelar" runat="server" Text="Cancelar" OnClick="Button3_Click" />
         <asp:Label ID="Label6" runat="server"></asp:Label>
         </center>
         
