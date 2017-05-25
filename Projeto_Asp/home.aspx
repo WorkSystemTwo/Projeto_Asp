@@ -26,15 +26,15 @@
 
         <br />
 
-            <b> <a href=""> - Gerenciar Clientes</a></b>
+            <b> <a href="visualizacaoCliente.aspx"> - Gerenciar Clientes</a></b>
 
         <br />
                     
-            <b> <a href=""> - Cadastrar Viagem</a></b>
+            <b> <a href="cadastroViagem.aspx"> - Cadastrar Viagem</a></b>
 
         <br />
 
-            <b> <a href=""> - Gerenciar Viagens</a></b>
+            <b> <a href="visualizacaoViagem.aspx"> - Gerenciar Viagens</a></b>
 
         <br />
         
