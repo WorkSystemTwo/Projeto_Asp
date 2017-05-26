@@ -42,7 +42,7 @@
 
         <br />
 
-            <b> <a href=""> - Visualizar Viagens</a></b>
+            <b> <a href="visualizacaoPassagem.aspx"> - Visualizar Viagens</a></b>
             
         <br />
             
