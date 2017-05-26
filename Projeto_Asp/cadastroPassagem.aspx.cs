@@ -13,5 +13,10 @@ namespace Projeto_Asp
 		{
 
 		}
+
+        protected void btnNovo_Click(object sender, EventArgs e)
+        {
+
+        }
 	}
 }

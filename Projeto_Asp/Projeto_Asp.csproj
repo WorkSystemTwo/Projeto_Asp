@@ -62,8 +62,8 @@
     <Content Include="cadastroViagem.aspx" />
     <Content Include="home.aspx" />
     <Content Include="visualizacaoCliente.aspx" />
+    <Content Include="visualizacaoPassagem.aspx" />
     <Content Include="visualizacaoViagem.aspx" />
-    <Content Include="visualizarPassagem.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -103,19 +103,19 @@
     <Compile Include="visualizacaoCliente.aspx.designer.cs">
       <DependentUpon>visualizacaoCliente.aspx</DependentUpon>
     </Compile>
+    <Compile Include="visualizacaoPassagem.aspx.cs">
+      <DependentUpon>visualizacaoPassagem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="visualizacaoPassagem.aspx.designer.cs">
+      <DependentUpon>visualizacaoPassagem.aspx</DependentUpon>
+    </Compile>
     <Compile Include="visualizacaoViagem.aspx.cs">
       <DependentUpon>visualizacaoViagem.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="visualizacaoViagem.aspx.designer.cs">
       <DependentUpon>visualizacaoViagem.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="visualizarPassagem.aspx.cs">
-      <DependentUpon>visualizarPassagem.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="visualizarPassagem.aspx.designer.cs">
-      <DependentUpon>visualizarPassagem.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace Projeto_Asp
 {
-    public partial class visualizarPassagem : System.Web.UI.Page
+    public partial class visualizacaoPassagem : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

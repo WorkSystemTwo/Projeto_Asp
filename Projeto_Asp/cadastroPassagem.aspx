@@ -44,7 +44,7 @@
         &nbsp;
         <asp:TextBox ID="txtNomeCliente" runat="server" ReadOnly="true" Width="316px" Enabled="False"></asp:TextBox>
         &nbsp;
-        <asp:Button ID="btnVerificar" runat="server" Text="Verificar Cliente" />
+        <asp:Button ID="btnVerificar" runat="server" Text="Verificar Cliente" BorderStyle="None" Height="27px" />
         <br />
         <br />
         <asp:Label ID="Label5" runat="server" Text="Confirmar CPF : " Visible="False"></asp:Label>
@@ -56,11 +56,11 @@
         
         <center>
 
-            <asp:Button ID="btnNovo" runat="server" Text="Novo" Width="51px"></asp:Button>
+            <asp:Button ID="btnNovo" runat="server" Text="Novo" Width="51px" BorderStyle="None" Height="26px" OnClick="btnNovo_Click"></asp:Button>
             &nbsp;
-            <asp:Button ID="btnSalvar" runat="server" Text="Salvar" Enabled="False"></asp:Button>
+            <asp:Button ID="btnSalvar" runat="server" Text="Salvar" Enabled="False" BorderStyle="None" Height="25px"></asp:Button>
             &nbsp;
-            <asp:Button ID="btnCancelar" runat="server" Text="Cancelar" Enabled="False"></asp:Button>
+            <asp:Button ID="btnCancelar" runat="server" Text="Cancelar" Enabled="False" BorderStyle="None" Height="25px"></asp:Button>
 
         </center>
 
