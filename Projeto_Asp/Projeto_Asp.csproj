@@ -57,6 +57,10 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\BD.mdf" />
+    <Content Include="App_Data\BD_log.ldf">
+      <DependentUpon>BD.mdf</DependentUpon>
+    </Content>
     <Content Include="cadastrarCliente.aspx" />
     <Content Include="cadastroPassagem.aspx" />
     <Content Include="cadastroViagem.aspx" />
