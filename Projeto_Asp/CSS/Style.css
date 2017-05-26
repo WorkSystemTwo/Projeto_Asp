@@ -1,0 +1,45 @@
+﻿#menu {
+
+    background-color: #fffa99;
+    font-family: Arial;
+    width: 200px;
+    height: 500px;
+}
+
+#cadastro{
+
+    background-color: #c0fe5b;
+    width: 900px;
+    height: 500px;
+
+}
+
+#consulta{
+
+    background-color: #ccf1e4;
+    width: 900px;
+    height: 500px;
+
+}
+
+h4{
+
+    font-family: Arial;
+    text-align: center;
+
+}
+
+#h3_menu{
+
+    text-align: center;
+    font-size: 14px;
+    font-family: Arial;
+
+}
+
+#escritaPagina{
+      
+    font-size: 14px;
+    font-family: Arial;
+    
+}

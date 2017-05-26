@@ -7,41 +7,45 @@
 
     <title>Cadastro de Viagem</title>
 
+    <link href="CSS/Style.css" rel="stylesheet" type="text/css" />
+
 </head>
 
 <body>
 
     <form id="form1" runat="server">
 
-    <div>
+    <div id="cadastro">
     
-            <center><h3> CADASTRAR VIAGEM</h3></center>
+            <center><h4> CADASTRAR VIAGEM</h4></center>
 
         <br />
         <br />
         <br />
+
+        <div id="escritaPagina">
 
         <asp:Label ID="Label1" runat="server" Text="ID Viagem : "></asp:Label>
         <asp:TextBox ID="txtIdViagem" runat="server" ReadOnly="True" Width="108px"></asp:TextBox>
-            <br />
+        <br />
         <br />
         <asp:Label ID="Label2" runat="server" Text="Cidade Origem : "></asp:Label>
         <asp:TextBox ID="txtOrigem" runat="server" Width="226px" Enabled="False"></asp:TextBox>
         &nbsp;
         <asp:Label ID="Label3" runat="server" Text="Cidade Destino : "></asp:Label>
         <asp:TextBox ID="txtDestino" runat="server" Width="225px" Enabled="False"></asp:TextBox>
-            <br />
+        <br />
         <br />
         <asp:Label ID="Label4" runat="server" Text="Data Viagem : "></asp:Label>
         <asp:TextBox ID="txtData" runat="server" TextMode="Date" Enabled="False"></asp:TextBox>
         &nbsp;
         <asp:Label ID="Label5" runat="server" Text="Hora Viagem : "></asp:Label>
         <asp:TextBox ID="txtHora" runat="server" Enabled="False"></asp:TextBox>
-            <br />
+        <br />
         <br />
         <asp:Label ID="Label6" runat="server" Text="Previsão Chegada : "></asp:Label>
         <asp:TextBox ID="txtPrevChegada" runat="server" Width="135px" Enabled="False"></asp:TextBox>
-            <br />
+        <br />
         <br />
         <asp:Label ID="Label7" runat="server" Text="Observação : "></asp:Label>
         <asp:TextBox ID="txtObs" runat="server" Height="95px" TextMode="MultiLine" Width="391px" Enabled="False"></asp:TextBox>
@@ -61,7 +65,13 @@
 
             <asp:Button ID="btnCancelar" runat="server" Text="Cancelar" BorderStyle="None" Height="25px" Enabled="False" /></asp:Button>
             
+            <br />
+
+            <asp:Label ID="lblMensagem" runat="server" Text="**"></asp:Label>
+            
         </center>
+
+        </div>
 
     </div>
 

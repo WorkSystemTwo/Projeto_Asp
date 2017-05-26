@@ -7,6 +7,7 @@
 <head runat="server">
 
     <title>Venda de Passagem</title>
+    <link href="CSS/Style.css" rel="stylesheet" type="text/css" />
 
 </head>
 
@@ -14,13 +15,14 @@
 
     <form id="form1" runat="server">
 
-    <div>
+    <div id="cadastro">
 
-        <center><h3>VENDA DE PASSAGENS</h3></center>
+        <center><h4>VENDA DE PASSAGENS</h4></center>
 
         <br />
         <br />
-        <br />
+
+        <div id="escritaPagina">
 
         <asp:Label ID="Label1" runat="server" Text="Cod Passagem : "></asp:Label>
         &nbsp;
@@ -63,7 +65,7 @@
             <asp:Button ID="btnCancelar" runat="server" Text="Cancelar" Enabled="False" BorderStyle="None" Height="25px"></asp:Button>
 
         </center>
-
+        </div>
     
     </div>
 

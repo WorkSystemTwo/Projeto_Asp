@@ -7,6 +7,7 @@
 <head runat="server">
 
     <title>Gerenciar Viagem</title>
+    <link href="CSS/Style.css" rel="stylesheet" type="text/css" />
 
 </head>
 
@@ -14,21 +15,26 @@
 
     <form id="form1" runat="server">
 
-    <div>
+    <div id="consulta">
     
-            <center> <h3> GERENCIAR VIAGEM</h3></center>
+            <center> <h4> GERENCIAR VIAGEM</h4></center>
 
             <br />
             <br />
-            <br />
 
-        <b>
-        <asp:Label ID="Label8" runat="server" Text="Pesquisa por Nome:"></asp:Label>
-         &nbsp;
-        <asp:TextBox ID="txtPesquisa" runat="server" Width="406px"></asp:TextBox>
-         &nbsp;
-        <asp:Button ID="btnPesquisar" runat="server" Text="Pesquisar" BorderStyle="None" Height="28px" />
-        </b>
+        <div id="escritaPagina">
+
+            <center>
+
+                <b>
+                <asp:Label ID="Label8" runat="server" Text="Pesquisa por Nome:"></asp:Label>
+                 &nbsp;
+                <asp:TextBox ID="txtPesquisa" runat="server" Width="406px"></asp:TextBox>
+                 &nbsp;
+                <asp:Button ID="btnPesquisar" runat="server" Text="Pesquisar" BorderStyle="None" Height="28px" />
+                </b>
+
+            </center>
 
         <br />
         <br />
@@ -74,6 +80,8 @@
             <asp:Button ID="btnCancelar" runat="server" Text="Cancelar" BorderStyle="None" Height="25px" Enabled="False" /></asp:Button>
             
         </center>
+
+            </div>
 
     </div>
 

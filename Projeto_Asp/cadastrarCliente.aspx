@@ -4,16 +4,19 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title>Cadastro de Clientes</title>
+
+    <link href="CSS/Style.css" type="text/css" rel="stylesheet" />
+
 </head>
 <body>
     <form id="form1" runat="server">
-    <div style="height: 559px">
-    
-    
+    <div id="cadastro">
+
+        <center><h4> CADASTRO DE CLIENTES</h4><br /></center>
         <br />
-<center><b> Cadastro Cliente </b><br /></center>
-        <br />
+        <div id="escritaPagina">
+
         <asp:Label ID="Label1" runat="server" Text="CPF:"></asp:Label>
 &nbsp;<asp:TextBox ID="txtCpf" runat="server" Enabled="False" Width="142px"></asp:TextBox>
         <br />
@@ -30,15 +33,20 @@
         <br />
         <br />
         <asp:Label ID="Label5" runat="server" Text="Obs:"></asp:Label>
-&nbsp;<asp:TextBox ID="txtObs" runat="server" Enabled="False" Height="236px" TextMode="MultiLine" Width="432px"></asp:TextBox>
+&nbsp;<asp:TextBox ID="txtObs" runat="server" Enabled="False" Height="164px" TextMode="MultiLine" Width="432px"></asp:TextBox>
         <br />
         <br />
-        <center><asp:Button ID="btnNovo" runat="server" OnClick="Button1_Click" Text="Novo" />&nbsp;
+        <center><asp:Button ID="btnNovo" runat="server" OnClick="Button1_Click" Text="Novo" BorderStyle="None" Height="24px" />&nbsp;
 
-        &nbsp;<asp:Button ID="btnSalvar" runat="server" Text="Salvar" OnClick="Button2_Click" />&nbsp;
-&nbsp;<asp:Button ID="btnCancelar" runat="server" Text="Cancelar" OnClick="Button3_Click" />
-        &nbsp;<asp:Label ID="Label6" runat="server"></asp:Label>
+        &nbsp;<asp:Button ID="btnSalvar" runat="server" Text="Salvar" OnClick="Button2_Click" BorderStyle="None" Height="24px" />&nbsp;
+&nbsp;<asp:Button ID="btnCancelar" runat="server" Text="Cancelar" OnClick="Button3_Click" BorderStyle="None" Height="25px" />
+        &nbsp;
+            <br />
+
+            <asp:Label ID="lblMensagem" runat="server">**</asp:Label>
         </center>
+
+        </div>
         
         <br />
         <br />
