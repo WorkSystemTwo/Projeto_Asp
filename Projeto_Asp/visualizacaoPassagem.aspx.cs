@@ -16,7 +16,7 @@ namespace Projeto_Asp
 
         protected void btnEditar_Click(object sender, EventArgs e)
         {
-            private void Limpar
+            
         }
     }
 }
