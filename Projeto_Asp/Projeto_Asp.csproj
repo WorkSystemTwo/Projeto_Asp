@@ -66,6 +66,7 @@
     <Content Include="cadastroPassagem.aspx" />
     <Content Include="cadastroViagem.aspx" />
     <Content Include="CSS\Style.css" />
+    <Content Include="frame.html" />
     <Content Include="home.aspx" />
     <Content Include="visualizacaoCliente.aspx" />
     <Content Include="visualizacaoPassagem.aspx" />

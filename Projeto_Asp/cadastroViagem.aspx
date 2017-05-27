@@ -21,7 +21,6 @@
 
         <br />
         <br />
-        <br />
 
         <div id="escritaPagina">
 

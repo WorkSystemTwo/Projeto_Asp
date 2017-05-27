@@ -45,8 +45,8 @@ namespace Projeto_Asp
 
         protected void btnSalvar_Click(object sender, EventArgs e)
         {
-            Label9.Text = "Registro alterado com sucesso!";
-            Label9.ForeColor = System.Drawing.Color.Green;
+            lblMensagem.Text = "Registro alterado com sucesso!";
+            lblMensagem.ForeColor = System.Drawing.Color.Green;
             Desabilitar();
             Limpar();
         }

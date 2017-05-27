@@ -42,6 +42,12 @@
         <br />
         <br />
 
+        <asp:Label ID="Label6" runat="server" Text="Valor Passagem : "></asp:Label>
+        &nbsp;
+        <asp:TextBox ID="txtValorPassagem" runat="server" Enabled="False" Width="78px"></asp:TextBox>
+        <br />
+        <br />
+
         <asp:Label ID="Label2" runat="server" Text="Nome Cliente : " ReadOnly="true"></asp:Label>
         &nbsp;
         <asp:TextBox ID="txtNomeCliente" runat="server" ReadOnly="true" Width="316px" Enabled="False"></asp:TextBox>
@@ -58,7 +64,7 @@
         
         <center>
 
-            <asp:Button ID="btnNovo" runat="server" Text="Novo" Width="51px" BorderStyle="None" Height="26px" OnClick="btnNovo_Click"></asp:Button>
+            <asp:Button ID="btnNovo" runat="server" Text="Novo" Width="51px" BorderStyle="None" Height="25px" OnClick="btnNovo_Click"></asp:Button>
             &nbsp;
             <asp:Button ID="btnSalvar" runat="server" Text="Salvar" Enabled="False" BorderStyle="None" Height="25px"></asp:Button>
             &nbsp;

@@ -18,17 +18,28 @@
     <div style="height: 534px" id="consulta">
 
         <center><h4> CONSULTA DE PASSAGEM</h4></center>
-        <center>
-        <asp:Label ID="Label6" runat="server" Text="Pesquisar por Código:"></asp:Label>
-            &nbsp;
-        <asp:TextBox ID="txtPesquisa" runat="server" Width="478px"></asp:TextBox>
-        &nbsp;<asp:Button ID="btnPesquisar" runat="server" Text="Pesquisar" BorderStyle="None" />
-        </center>
-        <br/>
-        <br/>
 
-        
+        <br/>
+        <br/>
+                        
         <div id="escritaPagina">
+
+         <center>
+
+        <asp:Label ID="Label6" runat="server" Text="Pesquisar por Código:"></asp:Label>
+
+            &nbsp;
+
+        <asp:TextBox ID="txtPesquisa" runat="server" Width="478px"></asp:TextBox>
+
+        &nbsp;
+            
+        <asp:Button ID="btnPesquisar" runat="server" Text="Pesquisar" BorderStyle="None" Height="27px" />
+
+        </center>
+
+            <br />
+            <br />
 
         <asp:Label ID="Label1" runat="server" Text="Código Passagem:"></asp:Label>
 &nbsp;
@@ -44,9 +55,11 @@
         <br />
         <asp:Label ID="Label3" runat="server" Text="CPF:"></asp:Label>
 &nbsp;<asp:TextBox ID="txtCpf" runat="server" Width="140px" Enabled="False"></asp:TextBox>
+
             <br />
             <br />
-&nbsp;<asp:Label ID="Label4" runat="server" Text="Poltrona:"></asp:Label>
+
+            <asp:Label ID="Label4" runat="server" Text="Poltrona:"></asp:Label>
 &nbsp;<asp:TextBox ID="txtPoltrona" runat="server" Width="83px" Enabled="False"></asp:TextBox>
         
       

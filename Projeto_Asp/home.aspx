@@ -7,6 +7,7 @@
 <head runat="server">
 
     <title>HOME - AGÊNCIA VIAGEM</title>
+
     <link href="CSS/Style.css" rel="stylesheet" type="text/css">
 
 </head>
@@ -19,7 +20,7 @@
         
         <center> 
 
-            <h4> MENU </h4> 
+            <h4> HOME </h4> 
 
         </center>
 
@@ -27,32 +28,32 @@
 
         <div id="h3_menu">
 
-            <b> <a href="cadastrarCliente.aspx"> Cadastrar Clientes </a></b>
+            <li><b> <a href="cadastrarCliente.aspx" target="lado_direito"> Cadastrar Clientes </a></b></li>
 
         <br />
         <br />
 
-            <b> <a href="visualizacaoCliente.aspx"> Gerenciar Clientes</a></b>
+            <li><b> <a href="visualizacaoCliente.aspx" target="lado_direito"> Gerenciar Clientes</a></b></li>
 
         <br />
         <br />
                     
-            <b> <a href="cadastroViagem.aspx"> Cadastrar Viagem</a></b>
+            <li><b> <a href="cadastroViagem.aspx" target="lado_direito"> Cadastrar Viagem</a></b></li>
 
         <br />
         <br />
 
-            <b> <a href="visualizacaoViagem.aspx"> Gerenciar Viagens</a></b>
+            <li><b> <a href="visualizacaoViagem.aspx" target="lado_direito"> Gerenciar Viagens</a></b></li>
 
         <br />
         <br />
         
-            <b> <a href="cadastroPassagem.aspx"> Nova Passagem</a></b>
+            <li><b> <a href="cadastroPassagem.aspx" target="lado_direito"> Nova Passagem</a></b></li>
 
         <br />
         <br />
 
-            <b> <a href="visualizacaoPassagem.aspx"> Visualizar Viagens</a></b>
+            <li><b> <a href="visualizacaoPassagem.aspx" target="lado_direito"> Visualizar Viagens</a></b></li>
             
         <br />     
             

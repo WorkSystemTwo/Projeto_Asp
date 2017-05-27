@@ -31,7 +31,7 @@
                  &nbsp;
                 <asp:TextBox ID="txtPesquisa" runat="server" Width="406px"></asp:TextBox>
                  &nbsp;
-                <asp:Button ID="btnPesquisar" runat="server" Text="Pesquisar" BorderStyle="None" Height="28px" />
+                <asp:Button ID="btnPesquisar" runat="server" Text="Pesquisar" BorderStyle="None" Height="26px" />
                 </b>
 
             </center>
@@ -77,11 +77,11 @@
 
             &nbsp;
 
-            <asp:Button ID="btnExcluir" runat="server" BorderStyle="None" Enabled="False" Text="Excluir" />
+            <asp:Button ID="btnExcluir" runat="server" BorderStyle="None" Enabled="False" Text="Excluir" Height="25px" />
 &nbsp;<asp:Button ID="btnCancelar" runat="server" Text="Cancelar" BorderStyle="None" Height="25px" Enabled="False" OnClick="btnCancelar_Click" /></asp:Button>
             
             <br />
-            <asp:Label ID="Label9" runat="server"></asp:Label>
+            <asp:Label ID="lblMensagem" runat="server">**</asp:Label>
             
         </center>
 
