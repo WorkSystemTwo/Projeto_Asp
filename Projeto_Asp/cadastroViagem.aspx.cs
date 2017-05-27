@@ -28,6 +28,7 @@ namespace Projeto_Asp
             lblMensagem.ForeColor = System.Drawing.Color.Green; // mudando a cor do texto
             Desabilitar();
             Limpar();
+
         }
 
         protected void btnCancelar_Click(object sender, EventArgs e)

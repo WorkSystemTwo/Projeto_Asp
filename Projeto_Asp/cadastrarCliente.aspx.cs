@@ -18,7 +18,7 @@ namespace Projeto_Asp
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            novo();
+            novo();            
         }
 
         protected void Button3_Click(object sender, EventArgs e)
@@ -29,12 +29,11 @@ namespace Projeto_Asp
         protected void Button2_Click(object sender, EventArgs e)
         {
             //insert através do banco
-
             try
             {
                 Banco insert = new Banco(txtCpf.Text, txtNome.Text, txtCelular.Text, txtRg.Text, txtObs.Text);
                 lblMensagem.Text = "Cliente inserido com Sucesso";
-                save_cancel();
+                save_cancel();                
             }
 
             catch (Exception erro)

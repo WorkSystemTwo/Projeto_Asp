@@ -24,7 +24,7 @@
        <center> <asp:Label ID="Label2" runat="server" Text="Pesquisa por nome:"></asp:Label>
 
          &nbsp;<asp:TextBox ID="txtPesquisaNome" runat="server" Width="478px"></asp:TextBox>&nbsp;
-           <asp:Button ID="btnPesquisar" runat="server" Text="Pesquisar" BorderStyle="None" Height="25px" />
+           <asp:Button ID="btnPesquisar" runat="server" Text="Pesquisar" BorderStyle="None" Height="25px" OnClick="btnPesquisar_Click" />
         </center>
        
         <br />
