@@ -23,7 +23,7 @@ namespace Projeto_Asp
         {
            
 
-            Banco insert = new Banco(int.Parse(txtIdViagem.Text),txtOrigem.Text, txtDestino.Text, txtData.Text, txtHora.Text, txtPrevChegada.Text, txtObs.Text);
+            Banco insert = new Banco (txtOrigem.Text, txtDestino.Text, txtData.Text, txtHora.Text, txtPrevChegada.Text, txtObs.Text);
             lblMensagem.Text = "Registro inserido com sucesso!"; 
             lblMensagem.ForeColor = System.Drawing.Color.Green; // mudando a cor do texto
             Desabilitar();
