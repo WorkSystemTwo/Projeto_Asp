@@ -71,7 +71,7 @@
         <center>
         <asp:Button ID="btnEditar" runat="server" Text="Editar" OnClick="btnEditar_Click" BorderStyle="None" Height="25px" />
         &nbsp;<asp:Button ID="btnSalvar" runat="server" Text="Salvar" Enabled="False" BorderStyle="None" OnClick="btnSalvar_Click" Height="25px"/>&nbsp;
-            <asp:Button ID="btnExcluir" runat="server" Text="Excluir" Enabled="False" BorderStyle="None" Height="25px" />&nbsp;
+            <asp:Button ID="btnExcluir" runat="server" Text="Excluir" Enabled="False" BorderStyle="None" Height="25px" OnClick="btnExcluir_Click" />&nbsp;
         <asp:Button ID="btnCancelar" runat="server" Text="Cancelar" Enabled="False" BorderStyle="None" OnClick="btnCancelar_Click" Height="25px" />
         &nbsp;
             <br />

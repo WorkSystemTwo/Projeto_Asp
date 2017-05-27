@@ -50,7 +50,7 @@
         <br />
         <center><asp:Button ID="btnEditar" runat="server" Text="Editar" BorderStyle="None" Height="25px" OnClick="btnEditar_Click" />
             &nbsp;<asp:Button ID="btnSalvar" runat="server" Text="Salvar" BorderStyle="None" Height="25px" Enabled="False" OnClick="btnSalvar_Click" />
-        &nbsp;<asp:Button ID="btnExcluir" runat="server" BorderStyle="None" Enabled="False" Height="25px" Text="Excluir" />
+        &nbsp;<asp:Button ID="btnExcluir" runat="server" BorderStyle="None" Enabled="False" Height="25px" Text="Excluir" OnClick="btnExcluir_Click" />
 &nbsp;<asp:Button ID="btnCancelar" runat="server" Text="Cancelar" BorderStyle="None" Height="25px" Enabled="False" OnClick="btnCancelar_Click" />
 &nbsp;
            <br />

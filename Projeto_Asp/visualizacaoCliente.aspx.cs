@@ -52,6 +52,12 @@ namespace Projeto_Asp
 
         }
 
-
+        protected void btnExcluir_Click(object sender, EventArgs e)
+        {
+            Label8.Text = "Registro excluido com sucesso!";
+            Label8.ForeColor = System.Drawing.Color.Green;
+            Limpar();
+            Desabilitar();
+        }
     }
 }
