@@ -52,12 +52,12 @@
         &nbsp;
         <asp:TextBox ID="txtNomeCliente" runat="server" ReadOnly="true" Width="316px" Enabled="False"></asp:TextBox>
         &nbsp;
-        <asp:Button ID="btnVerificar" runat="server" Text="Verificar Cliente" BorderStyle="None" Height="27px" />
+        <asp:Button ID="btnVerificar" runat="server" Text="Verificar Cliente" BorderStyle="None" Height="27px" Visible="False" />
         <br />
         <br />
         <asp:Label ID="Label5" runat="server" Text="Confirmar CPF : " Visible="False"></asp:Label>
         &nbsp;
-        <asp:TextBox ID="txtCPF" runat="server" Enabled="False" Visible="False" Width="168px"></asp:TextBox>
+        <asp:TextBox ID="txtCPF" runat="server" Enabled="False" Visible="False" Width="168px" ReadOnly="True"></asp:TextBox>
 
         <br />
         <br />
@@ -68,7 +68,7 @@
             &nbsp;
             <asp:Button ID="btnSalvar" runat="server" Text="Salvar" Enabled="False" BorderStyle="None" Height="25px"></asp:Button>
             &nbsp;
-            <asp:Button ID="btnCancelar" runat="server" Text="Cancelar" Enabled="False" BorderStyle="None" Height="25px"></asp:Button>
+            <asp:Button ID="btnCancelar" runat="server" Text="Cancelar" Enabled="False" BorderStyle="None" Height="25px" OnClick="btnCancelar_Click"></asp:Button>
 
         </center>
         </div>

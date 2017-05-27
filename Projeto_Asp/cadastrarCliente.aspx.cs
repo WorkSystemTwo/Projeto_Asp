@@ -18,18 +18,48 @@ namespace Projeto_Asp
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            txtCpf.Enabled = txtCelular.Enabled = txtNome.Enabled = txtObs.Enabled = txtRg.Enabled = true;
+            novo();
         }
 
         protected void Button3_Click(object sender, EventArgs e)
         {
-            txtCelular.Enabled = txtCpf.Enabled = txtNome.Enabled = txtObs.Enabled = txtRg.Enabled = false;
+            save_cancel();
         }
 
         protected void Button2_Click(object sender, EventArgs e)
         {
-                              
-             
+            save_cancel();
+        }
+
+        //function for button novo
+        private void novo()
+        {
+            txtCpf.Enabled = true;
+            txtCelular.Enabled = true;
+            txtNome.Enabled = true;
+            txtObs.Enabled = true;
+            txtRg.Enabled = true;
+            btnNovo.Enabled = false;
+            btnSalvar.Enabled = true;
+            btnCancelar.Enabled = true;
+            txtCpf.Focus();
+        }
+        //function for button save and cancel
+        private void save_cancel()
+        {
+            txtCpf.Enabled = false;
+            txtCpf.Text = "";
+            txtCelular.Enabled = false;
+            txtCelular.Text = "";
+            txtNome.Enabled = false;
+            txtNome.Text = "";
+            txtObs.Enabled = false;
+            txtObs.Text = "";
+            txtRg.Enabled = false;
+            txtRg.Text = "";
+            btnNovo.Enabled = true;
+            btnSalvar.Enabled = false;
+            btnCancelar.Enabled = false;            
         }
     }
 }

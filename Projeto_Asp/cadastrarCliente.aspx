@@ -48,8 +48,8 @@
             
                         <asp:Button ID="btnNovo" runat="server" OnClick="Button1_Click" Text="Novo" BorderStyle="None" Height="25px" Width="48px" />&nbsp;
 
-                        &nbsp;<asp:Button ID="btnSalvar" runat="server" Text="Salvar" OnClick="Button2_Click" BorderStyle="None" Height="25px" Width="51px" />&nbsp;
-                        &nbsp;<asp:Button ID="btnCancelar" runat="server" Text="Cancelar" OnClick="Button3_Click" BorderStyle="None" Height="25px" />
+                        &nbsp;<asp:Button ID="btnSalvar" runat="server" Text="Salvar" OnClick="Button2_Click" BorderStyle="None" Height="25px" Width="51px" Enabled="False" />&nbsp;
+                        &nbsp;<asp:Button ID="btnCancelar" runat="server" Text="Cancelar" OnClick="Button3_Click" BorderStyle="None" Height="25px" Enabled="False" />
                         &nbsp;
                         <br />
 

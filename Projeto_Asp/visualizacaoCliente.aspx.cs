@@ -17,26 +17,6 @@ namespace Projeto_Asp
         protected void btnEditar_Click(object sender, EventArgs e)
         {
             Habilitar();
-
-        }
-
-        public void Habilitar()
-        {
-            txtCelular.Enabled = txtCPF.Enabled = txtNome.Enabled = txtOBS.Enabled = txtRG.Enabled = true;
-            btnCancelar.Enabled = btnSalvar.Enabled =btnExcluir.Enabled= true;
-        }
-
-        public void Desabilitar()
-        {
-            txtCelular.Enabled = txtCPF.Enabled = txtNome.Enabled = txtOBS.Enabled = txtRG.Enabled = false;
-            btnCancelar.Enabled = btnSalvar.Enabled = btnExcluir.Enabled =  false;
-
-        }
-
-        public void Limpar()
-        {
-            txtCelular.Text = txtCPF.Text = txtNome.Text = txtOBS.Text = txtPesquisaNome.Text = txtRG.Text = "";
-
         }
 
         protected void btnSalvar_Click(object sender, EventArgs e)
@@ -52,5 +32,26 @@ namespace Projeto_Asp
             Desabilitar();
             Limpar();
         }
+
+        public void Habilitar()
+        {
+            txtCelular.Enabled = txtCPF.Enabled = txtNome.Enabled = txtOBS.Enabled = txtRG.Enabled = true;
+            btnCancelar.Enabled = btnSalvar.Enabled = btnExcluir.Enabled = true;
+        }
+
+        public void Desabilitar()
+        {
+            txtCelular.Enabled = txtCPF.Enabled = txtNome.Enabled = txtOBS.Enabled = txtRG.Enabled = false;
+            btnCancelar.Enabled = btnSalvar.Enabled = btnExcluir.Enabled = false;
+
+        }
+
+        public void Limpar()
+        {
+            txtCelular.Text = txtCPF.Text = txtNome.Text = txtOBS.Text = txtPesquisaNome.Text = txtRG.Text = "";
+
+        }
+
+
     }
 }

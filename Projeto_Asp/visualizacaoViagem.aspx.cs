@@ -16,24 +16,7 @@ namespace Projeto_Asp
 
         protected void btnAlterar_Click(object sender, EventArgs e)
         {
-            Habilitar();       
-
-        }
-        public void Habilitar()//metodo para habilitar textbox e botoes
-        {
-            txtData.Enabled = txtDestino.Enabled = txtHora.Enabled = txtIdViagem.Enabled = txtObs.Enabled = txtOrigem.Enabled  = txtPrevChegada.Enabled = true;
-            btnCancelar.Enabled = btnSalvar.Enabled = btnExcluir.Enabled= true;
-        }
-
-        public void Desabilitar()//metodo para desabilitar textbox e botoes
-        {
-            txtData.Enabled = txtDestino.Enabled = txtHora.Enabled = txtIdViagem.Enabled = txtObs.Enabled = txtOrigem.Enabled = txtPrevChegada.Enabled = false;
-            btnCancelar.Enabled = btnSalvar.Enabled = btnExcluir.Enabled= false;
-        }
-        public void Limpar()//metodo para limpar textbox
-        {
-            txtData.Text = txtDestino.Text= txtHora.Text= txtIdViagem.Text = txtObs.Text = txtOrigem.Text = txtPrevChegada.Text =  txtPesquisa.Text="";
-
+            Habilitar();
         }
 
         protected void btnCancelar_Click(object sender, EventArgs e)
@@ -50,5 +33,23 @@ namespace Projeto_Asp
             Desabilitar();
             Limpar();
         }
+
+        public void Habilitar()//metodo para habilitar textbox e botoes
+        {
+            txtData.Enabled = txtDestino.Enabled = txtHora.Enabled = txtIdViagem.Enabled = txtObs.Enabled = txtOrigem.Enabled = txtPrevChegada.Enabled = true;
+            btnCancelar.Enabled = btnSalvar.Enabled = btnExcluir.Enabled = true;
+        }
+
+        public void Desabilitar()//metodo para desabilitar textbox e botoes
+        {
+            txtData.Enabled = txtDestino.Enabled = txtHora.Enabled = txtIdViagem.Enabled = txtObs.Enabled = txtOrigem.Enabled = txtPrevChegada.Enabled = false;
+            btnCancelar.Enabled = btnSalvar.Enabled = btnExcluir.Enabled = false;
+        }
+        public void Limpar()//metodo para limpar textbox
+        {
+            txtData.Text = txtDestino.Text = txtHora.Text = txtIdViagem.Text = txtObs.Text = txtOrigem.Text = txtPrevChegada.Text = txtPesquisa.Text = "";
+
+        }
+
     }
 }
