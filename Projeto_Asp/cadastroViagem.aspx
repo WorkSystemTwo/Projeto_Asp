@@ -55,15 +55,15 @@
 
         <center> 
             
-            <asp:Button ID="btnNovo" runat="server" Text="Novo" Width="87px" BorderStyle="None" Height="25px"></asp:Button>
+            <asp:Button ID="btnNovo" runat="server" Text="Novo" Width="87px" BorderStyle="None" Height="25px" OnClick="btnNovo_Click"></asp:Button>
 
             &nbsp;
 
-            <asp:Button ID="btnCadastrar" runat="server" Text="Cadastrar" BorderStyle="None" Height="25px" Enabled="False"></asp:Button> 
+            <asp:Button ID="btnCadastrar" runat="server" Text="Cadastrar" BorderStyle="None" Height="25px" Enabled="False" OnClick="btnCadastrar_Click"></asp:Button> 
 
             &nbsp;
 
-            <asp:Button ID="btnCancelar" runat="server" Text="Cancelar" BorderStyle="None" Height="25px" Enabled="False" /></asp:Button>
+            <asp:Button ID="btnCancelar" runat="server" Text="Cancelar" BorderStyle="None" Height="25px" Enabled="False" OnClick="btnCancelar_Click" /></asp:Button>
             
             <br />
 

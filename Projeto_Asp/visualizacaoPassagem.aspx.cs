@@ -32,7 +32,7 @@ namespace Projeto_Asp
 
         public void Limpar()
         {
-            txtCodPassagem.Text = txtCodViagem.Text = txtCpf.Text = txtPoltrona.Text = "";
+            txtCodPassagem.Text = txtCodViagem.Text = txtCpf.Text = txtPoltrona.Text = txtPesquisa.Text= "";
         }
 
         public void MessagemSalvar()

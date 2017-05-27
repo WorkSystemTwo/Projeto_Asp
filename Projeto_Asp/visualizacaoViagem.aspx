@@ -69,15 +69,19 @@
 
         <center> 
             
-            <asp:Button ID="btnAlterar" runat="server" Text="Alterar" Width="87px" BorderStyle="None" Height="25px"></asp:Button>
+            <asp:Button ID="btnAlterar" runat="server" Text="Alterar" Width="87px" BorderStyle="None" Height="25px" OnClick="btnAlterar_Click"></asp:Button>
 
             &nbsp;
 
-            <asp:Button ID="btnSalvar" runat="server" Text="Salvar" BorderStyle="None" Height="25px" Enabled="False" Width="63px"></asp:Button> 
+            <asp:Button ID="btnSalvar" runat="server" Text="Salvar" BorderStyle="None" Height="25px" Enabled="False" Width="63px" OnClick="btnSalvar_Click"></asp:Button> 
 
             &nbsp;
 
-            <asp:Button ID="btnCancelar" runat="server" Text="Cancelar" BorderStyle="None" Height="25px" Enabled="False" /></asp:Button>
+            <asp:Button ID="btnExcluir" runat="server" BorderStyle="None" Enabled="False" Text="Excluir" />
+&nbsp;<asp:Button ID="btnCancelar" runat="server" Text="Cancelar" BorderStyle="None" Height="25px" Enabled="False" OnClick="btnCancelar_Click" /></asp:Button>
+            
+            <br />
+            <asp:Label ID="Label9" runat="server"></asp:Label>
             
         </center>
 
