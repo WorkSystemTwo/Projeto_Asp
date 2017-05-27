@@ -26,6 +26,7 @@ Passagem
 id_passagem PK
 id_viagem FK
 cpf_cliente FK
+vlr_passagem
 poltrona
 
 CRIAR TELA CADASTRO PASSAGEM - JOAO
