@@ -28,14 +28,8 @@ namespace Projeto_Asp
 
         protected void Button2_Click(object sender, EventArgs e)
         {
-            SqlConnection conexao = new SqlConnection(@"");
-            SqlCommand comando = new SqlCommand();
-            comando.Connection = conexao;
-            comando.CommandText = "Insert into ";
-
-
-
-
+                              
+             
         }
     }
 }
