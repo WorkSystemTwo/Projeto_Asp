@@ -4,3 +4,9 @@ C:\Users\João Paulo\Source\Repos\Projeto_Asp2\Projeto_Asp\bin\Projeto_Asp.pdb
 C:\Users\João Paulo\Source\Repos\Projeto_Asp2\Projeto_Asp\obj\Debug\Projeto_Asp.csprojResolveAssemblyReference.cache
 C:\Users\João Paulo\Source\Repos\Projeto_Asp2\Projeto_Asp\obj\Debug\Projeto_Asp.dll
 C:\Users\João Paulo\Source\Repos\Projeto_Asp2\Projeto_Asp\obj\Debug\Projeto_Asp.pdb
+C:\Users\Thiago_2\Desktop\Trabalho galvani\Projeto_Asp\bin\Projeto_Asp.dll.config
+C:\Users\Thiago_2\Desktop\Trabalho galvani\Projeto_Asp\bin\Projeto_Asp.dll
+C:\Users\Thiago_2\Desktop\Trabalho galvani\Projeto_Asp\bin\Projeto_Asp.pdb
+C:\Users\Thiago_2\Desktop\Trabalho galvani\Projeto_Asp\obj\Debug\Projeto_Asp.csprojResolveAssemblyReference.cache
+C:\Users\Thiago_2\Desktop\Trabalho galvani\Projeto_Asp\obj\Debug\Projeto_Asp.dll
+C:\Users\Thiago_2\Desktop\Trabalho galvani\Projeto_Asp\obj\Debug\Projeto_Asp.pdb

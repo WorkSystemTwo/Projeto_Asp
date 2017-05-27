@@ -18,7 +18,15 @@
     <div style="height: 534px" id="consulta">
 
         <center><h4> CONSULTA DE PASSAGEM</h4></center>
+        <center>
+        <asp:Label ID="Label6" runat="server" Text="Pesquisar por Código:"></asp:Label>
+            &nbsp;
+        <asp:TextBox ID="txtPesquisa" runat="server" Width="478px"></asp:TextBox>
+        &nbsp;<asp:Button ID="btnPesquisar" runat="server" Text="Pesquisar" BorderStyle="None" />
+        </center>
         <br/>
+        <br/>
+
         
         <div id="escritaPagina">
 
