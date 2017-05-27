@@ -66,7 +66,7 @@
 
             <asp:Button ID="btnNovo" runat="server" Text="Novo" Width="51px" BorderStyle="None" Height="25px" OnClick="btnNovo_Click"></asp:Button>
             &nbsp;
-            <asp:Button ID="btnSalvar" runat="server" Text="Salvar" Enabled="False" BorderStyle="None" Height="25px"></asp:Button>
+            <asp:Button ID="btnSalvar" runat="server" Text="Salvar" Enabled="False" BorderStyle="None" Height="25px" OnClick="btnSalvar_Click"></asp:Button>
             &nbsp;
             <asp:Button ID="btnCancelar" runat="server" Text="Cancelar" Enabled="False" BorderStyle="None" Height="25px" OnClick="btnCancelar_Click"></asp:Button>
 

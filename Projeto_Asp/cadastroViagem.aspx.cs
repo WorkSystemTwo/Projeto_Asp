@@ -18,9 +18,12 @@ namespace Projeto_Asp
         {
             Habilitar();
         }
-
+       
         protected void btnCadastrar_Click(object sender, EventArgs e)
         {
+           
+
+            Banco insert = new Banco(int.Parse(txtIdViagem.Text),txtOrigem.Text, txtDestino.Text, txtData.Text, txtHora.Text, txtPrevChegada.Text, txtObs.Text);
             lblMensagem.Text = "Registro inserido com sucesso!"; 
             lblMensagem.ForeColor = System.Drawing.Color.Green; // mudando a cor do texto
             Desabilitar();

@@ -58,5 +58,24 @@ namespace Projeto_Asp
             Label5.Visible = false;
             txtCPF.Visible = false;
         }
+
+        protected void btnSalvar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Banco insert = new Banco(int.Parse(txtIdPassagem.Text),int.Parse(listViagem.Text), txtCPF.Text, double.Parse(txtValorPassagem.Text),int.Parse(txtPoltrona.Text),txtNomeCliente.Text);
+                Label6.Text = "Passagem inserido com sucesso!";
+                Label6.ForeColor = System.Drawing.Color.Green;
+                salvar_cancelar();
+
+
+            }
+            catch(Exception erro)
+            {
+                Label6.Text = "Erro ao inserir passagem!" + erro.Message;
+
+            }
+        }
+       
     }
 }
