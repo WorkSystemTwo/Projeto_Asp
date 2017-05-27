@@ -61,9 +61,7 @@ namespace Projeto_Asp
         protected void btnPesquisar_Click(object sender, EventArgs e)
         {
 
-            Banco pesquisa = new Banco(txtPesquisaNome.Text);
-            
-
+            Banco teste = new Banco();
 
         }
     }

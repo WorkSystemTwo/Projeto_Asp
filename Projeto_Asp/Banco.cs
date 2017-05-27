@@ -9,6 +9,7 @@ namespace Projeto_Asp
 {
     public class Banco
     {
+        public string pesquisa;
 
         public static SqlConnection conexao = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Thiago_2\Source\Repos\Projeto_Asp\Projeto_Asp\App_Data\BD.mdf;Integrated Security=True");
 
@@ -97,9 +98,8 @@ namespace Projeto_Asp
         */
         
         //construtor para pesquisa de dados em CLIENTE 
-        public Banco (string pesquisa)
-        {
-            string cpf_cliente, nome, celular, rg, obs;
+        public void pesquisaCliente (string cpf_cliente, string nome, string celular, string rg, string obs)
+        {            
 
             SqlCommand comando = new SqlCommand();
             SqlDataReader reg = null;
@@ -121,8 +121,7 @@ namespace Projeto_Asp
             
         }       
 
-    }
-    
+    }    
 
 }
 
