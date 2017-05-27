@@ -63,7 +63,7 @@ namespace Projeto_Asp
         {
             try
             {
-                Banco insert = new Banco(int.Parse(txtIdPassagem.Text),int.Parse(listViagem.Text), txtCPF.Text, double.Parse(txtValorPassagem.Text),int.Parse(txtPoltrona.Text),txtNomeCliente.Text);
+                Banco insert = new Banco(int.Parse(listViagem.Text), txtCPF.Text, double.Parse(txtValorPassagem.Text),int.Parse(txtPoltrona.Text),txtNomeCliente.Text);
                 Label6.Text = "Passagem inserido com sucesso!";
                 Label6.ForeColor = System.Drawing.Color.Green;
                 salvar_cancelar();
