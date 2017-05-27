@@ -31,7 +31,7 @@ namespace Projeto_Asp
             conexao.Open();
 
             comando.ExecuteNonQuery();
-
+            
             conexao.Close();
 
         }
@@ -40,7 +40,11 @@ namespace Projeto_Asp
         public Banco (int id_passagem, int id_viagem, string cpf_cliente, double vlr_passagem, int poltrona, string mensagem)
         {
 
-            SqlCommand comando = new SqlCommand("INSERT INTO passagem (id_passagem, id_viagem, cpf_cliente, vlr_passagem, poltrona) VALUES (@id_passagem, @id_viagem, @cpf_cliente, @vlr_passagem, @poltrona)", conexao);
+            SqlCommand comando = new SqlCommand();
+
+            comando.Connection = conexao;
+
+            comando.CommandText = "INSERT INTO passagem (id_passagem, id_viagem, cpf_cliente, vlr_passagem, poltrona) VALUES (@id_passagem, @id_viagem, @cpf_cliente, @vlr_passagem, @poltrona";
 
             comando.Parameters.AddWithValue("@id_passagem", id_passagem);
             comando.Parameters.AddWithValue("@id_viagem", id_viagem);
@@ -60,7 +64,10 @@ namespace Projeto_Asp
         public Banco (int id_viagem, string origem, string destino, string data_saida, string hr_saida, string prev_chegada, string obs)
         {
 
-            SqlCommand comando = new SqlCommand("INSERT INTO viagem (id_viagem, origem, destino, data_saida, hr_saida, prev_chegada, obs) VALUES (@id_viagem, @origem, @destino, @data_saida, @hr_saida, @prev_chegada, @obs)", conexao);
+            SqlCommand comando = new SqlCommand();
+            comando.Connection = conexao;
+
+            comando.CommandText = "INSERT INTO viagem (id_viagem, origem, destino, data_saida, hr_saida, prev_chegada, obs) VALUES (@id_viagem, @origem, @destino, @data_saida, @hr_saida, @prev_chegada, @obs)";
 
             comando.Parameters.AddWithValue("@id_viagem", id_viagem);
             comando.Parameters.AddWithValue("@origem", origem);
@@ -78,7 +85,6 @@ namespace Projeto_Asp
 
         }
                 
-
     }
     
 

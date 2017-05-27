@@ -28,10 +28,23 @@ namespace Projeto_Asp
 
         protected void Button2_Click(object sender, EventArgs e)
         {
-            save_cancel();
+            //insert através do banco
+
+            try
+            {
+                Banco insert = new Banco(txtCpf.Text, txtNome.Text, txtCelular.Text, txtRg.Text, txtObs.Text);
+                lblMensagem.Text = "Cliente inserido com Sucesso";
+                save_cancel();
+            }
+
+            catch (Exception erro)
+            {
+                lblMensagem.Text = "Erro ao inserir cliente, favor verificar dados! Erro -> " + erro.Message;
+            }
+
         }
 
-        //function for button novo
+        //function for button new
         private void novo()
         {
             txtCpf.Enabled = true;
