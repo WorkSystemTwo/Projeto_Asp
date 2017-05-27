@@ -119,7 +119,12 @@ namespace Projeto_Asp
 
             conexao.Close();
             
-        }       
+        }   
+        
+        public Banco()
+        {
+
+        }    
 
     }    
 

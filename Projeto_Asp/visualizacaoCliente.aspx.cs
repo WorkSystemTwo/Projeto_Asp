@@ -62,7 +62,9 @@ namespace Projeto_Asp
         {
 
             Banco teste = new Banco();
-
+            teste.pesquisaCliente(txtCPF.Text, txtNome.Text, txtCelular.Text, txtRG.Text, txtOBS.Text);
+                       
+            
         }
     }
 }
