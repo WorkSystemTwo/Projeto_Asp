@@ -63,6 +63,20 @@ namespace Projeto_Asp
             Label5.Text = "Registro excluido com sucesso!";
             Label5.ForeColor = System.Drawing.Color.Green;
         }
+
+        protected void btnPesquisar_Click(object sender, EventArgs e)
+        {
+            //VERIFICAR QUAL RADIOBUTTON ESTA ATIVO E CHAMAR METODO
+            Passagem pesquisa = new Passagem();
+            pesquisa.pesquisaCPFCliente(txtPesquisa.Text);
+
+            txtCodPassagem.Text = pesquisa.id_passagem;
+            txtCodViagem.Text = pesquisa.id_viagem;
+            txtCpf.Text = pesquisa.cpf_cliente;
+            txtPoltrona.Text = pesquisa.poltrona;
+            txtVlrPassagem.Text = pesquisa.vlr_passagem;
+
+        }
     }
 
 }

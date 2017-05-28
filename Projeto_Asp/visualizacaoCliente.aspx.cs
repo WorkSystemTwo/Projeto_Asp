@@ -49,7 +49,6 @@ namespace Projeto_Asp
         public void Limpar()
         {
             txtCelular.Text = txtCPF.Text = txtNome.Text = txtOBS.Text = txtPesquisaNome.Text = txtRG.Text = "";
-
         }
 
         protected void btnExcluir_Click(object sender, EventArgs e)
@@ -60,11 +59,16 @@ namespace Projeto_Asp
 
         protected void btnPesquisar_Click(object sender, EventArgs e)
         {
-
-            Banco teste = new Banco();
-            teste.pesquisaCliente(txtCPF.Text, txtNome.Text, txtCelular.Text, txtRG.Text, txtOBS.Text);
-                       
-            
+            try
+            {
+                Cliente teste = new Cliente();
+                teste.pesquisaCliente(txtPesquisaNome.Text);
+                txtNome.Text = teste.nome;
+            }
+            catch(Exception erro)
+            {
+                Label8.Text = erro.Message;
+            }      
         }
     }
 }

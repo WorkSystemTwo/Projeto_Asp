@@ -26,15 +26,16 @@
 
          <center>
 
-        <asp:Label ID="Label6" runat="server" Text="Pesquisar por Código:"></asp:Label>
-
+            <asp:Label ID="Label6" runat="server" Text="Pesquisar por:"></asp:Label>
             &nbsp;
+            <asp:RadioButton ID="rdIDViagem" runat="server" Text="ID Viagem"></asp:RadioButton>
+            <asp:RadioButton ID="rdCPF" runat="server" Text="CPF Passageiro"></asp:RadioButton>
 
-        <asp:TextBox ID="txtPesquisa" runat="server" Width="478px"></asp:TextBox>
+             <br />
 
-        &nbsp;
-            
-        <asp:Button ID="btnPesquisar" runat="server" Text="Pesquisar" BorderStyle="None" Height="27px" />
+            <asp:TextBox ID="txtPesquisa" runat="server" Width="478px"></asp:TextBox>
+            &nbsp;            
+            <asp:Button ID="btnPesquisar" runat="server" Text="Pesquisar" BorderStyle="None" Height="27px" OnClick="btnPesquisar_Click" />
 
         </center>
 
@@ -55,6 +56,11 @@
         <br />
         <asp:Label ID="Label3" runat="server" Text="CPF:"></asp:Label>
 &nbsp;<asp:TextBox ID="txtCpf" runat="server" Width="140px" Enabled="False"></asp:TextBox>
+
+            <br />
+            <br />
+            Valor Passagem:
+            <asp:TextBox ID="txtVlrPassagem" runat="server"></asp:TextBox>
 
             <br />
             <br />

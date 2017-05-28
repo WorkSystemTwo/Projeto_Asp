@@ -21,14 +21,11 @@ namespace Projeto_Asp
        
         protected void btnCadastrar_Click(object sender, EventArgs e)
         {
-           
-
-            Banco insert = new Banco (txtOrigem.Text, txtDestino.Text, txtData.Text, txtHora.Text, txtPrevChegada.Text, txtObs.Text);
+            Viagem insert = new Viagem (txtOrigem.Text, txtDestino.Text, txtData.Text, txtHora.Text, txtPrevChegada.Text, txtObs.Text);
             lblMensagem.Text = "Registro inserido com sucesso!"; 
             lblMensagem.ForeColor = System.Drawing.Color.Green; // mudando a cor do texto
             Desabilitar();
             Limpar();
-
         }
 
         protected void btnCancelar_Click(object sender, EventArgs e)

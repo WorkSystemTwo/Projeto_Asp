@@ -31,6 +31,33 @@ namespace Projeto_Asp {
         protected global::System.Web.UI.WebControls.Label Label8;
         
         /// <summary>
+        /// rdId control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButton rdId;
+        
+        /// <summary>
+        /// rdOrigem control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButton rdOrigem;
+        
+        /// <summary>
+        /// rdDestino control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButton rdDestino;
+        
+        /// <summary>
         /// txtPesquisa control.
         /// </summary>
         /// <remarks>

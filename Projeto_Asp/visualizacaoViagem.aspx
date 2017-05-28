@@ -27,9 +27,14 @@
             <center>
 
                 <b>
-                <asp:Label ID="Label8" runat="server" Text="Pesquisa por Nome:"></asp:Label>
+                <asp:Label ID="Label8" runat="server" Text="Pesquisa por :"></asp:Label>
                  &nbsp;
-                <asp:TextBox ID="txtPesquisa" runat="server" Width="406px"></asp:TextBox>
+                <asp:RadioButton ID="rdId" runat="server" Text="ID Viagem"></asp:RadioButton>
+                <asp:RadioButton ID="rdOrigem" runat="server" Text="Cidade Origem"></asp:RadioButton>
+                <asp:RadioButton ID="rdDestino" runat="server" Text="Cidade Destino"></asp:RadioButton>
+                &nbsp;
+                <br />
+                <asp:TextBox ID="txtPesquisa" runat="server" Width="364px"></asp:TextBox>
                  &nbsp;
                 <asp:Button ID="btnPesquisar" runat="server" Text="Pesquisar" BorderStyle="None" Height="26px" />
                 </b>

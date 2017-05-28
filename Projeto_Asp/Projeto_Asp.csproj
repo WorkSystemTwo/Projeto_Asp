@@ -96,6 +96,7 @@
     <Compile Include="cadastroViagem.aspx.designer.cs">
       <DependentUpon>cadastroViagem.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Cliente.cs" />
     <Compile Include="home.aspx.cs">
       <DependentUpon>home.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -103,7 +104,9 @@
     <Compile Include="home.aspx.designer.cs">
       <DependentUpon>home.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Passagem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Viagem.cs" />
     <Compile Include="visualizacaoCliente.aspx.cs">
       <DependentUpon>visualizacaoCliente.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

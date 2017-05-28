@@ -31,6 +31,24 @@ namespace Projeto_Asp {
         protected global::System.Web.UI.WebControls.Label Label6;
         
         /// <summary>
+        /// rdIDViagem control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButton rdIDViagem;
+        
+        /// <summary>
+        /// rdCPF control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButton rdCPF;
+        
+        /// <summary>
         /// txtPesquisa control.
         /// </summary>
         /// <remarks>
@@ -101,6 +119,15 @@ namespace Projeto_Asp {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtCpf;
+        
+        /// <summary>
+        /// txtVlrPassagem control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtVlrPassagem;
         
         /// <summary>
         /// Label4 control.

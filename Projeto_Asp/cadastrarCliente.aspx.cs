@@ -31,7 +31,7 @@ namespace Projeto_Asp
             //insert através do banco
             try
             {
-                Banco insert = new Banco(txtCpf.Text, txtNome.Text, txtCelular.Text, txtRg.Text, txtObs.Text);
+                Cliente insert = new Cliente(txtCpf.Text, txtNome.Text, txtCelular.Text, txtRg.Text, txtObs.Text);
                 lblMensagem.Text = "Cliente inserido com Sucesso";
                 save_cancel();                
             }
