@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Data;
+using System.Data.SqlClient;
 
 namespace Projeto_Asp
 {
@@ -11,7 +13,27 @@ namespace Projeto_Asp
 	{
 		protected void Page_Load(object sender, EventArgs e)
 		{
+            //carregamento de dados para inserção de passagens
+            SqlConnection conexao = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C: \Users\João Paulo\Source\Repos\Projeto_Asp\Projeto_Asp\App_Data\BD.mdf;Integrated Security=True");
+            SqlCommand comando = new SqlCommand();
+            comando.Connection = conexao;
+            SqlDataReader reg = null;
+            comando.CommandText = "SELECT  * FROM viagem ORDER BY data_saida";
+            conexao.Open();
+            reg = comando.ExecuteReader();
 
+            //variaveis para salvar dados do banco
+
+            string destino, data_saida;
+
+            while (reg.Read())
+            {
+                destino = (reg["destino"].ToString());
+                data_saida = (reg["data_saida"].ToString());
+                listViagem.Items.Add(destino.ToString() + " - " + data_saida.ToString());
+            }
+
+            conexao.Close();
 		}
 
         protected void btnNovo_Click(object sender, EventArgs e)
