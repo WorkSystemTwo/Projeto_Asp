@@ -28,10 +28,14 @@ namespace Projeto_Asp
 
         protected void btnSalvar_Click(object sender, EventArgs e)
         {
-            lblMensagem.Text = "Registro alterado com sucesso!";
-            lblMensagem.ForeColor = System.Drawing.Color.Green;
-            Desabilitar();
-            Limpar();
+          
+           
+ 
+                lblMensagem.Text = "Registro alterado com sucesso!";
+                lblMensagem.ForeColor = System.Drawing.Color.Green;
+                Desabilitar();
+                Limpar();
+           
         }
 
         public void Habilitar()//metodo para habilitar textbox e botoes
@@ -53,19 +57,54 @@ namespace Projeto_Asp
 
         protected void btnPesquisar_Click(object sender, EventArgs e)
         {
-            //os métodos de pesquisa estão funcionais
+            if (rdId.Checked == false && rdOrigem.Checked == false && rdDestino.Checked == false)
+            {
+                lblMensagem.Text= "Seleciode uma das opções para pesquisar (ID Viagem, Origem, Destino)";
+                lblMensagem.ForeColor = System.Drawing.Color.Red;
+            }
+            else { 
+                if (rdId.Checked == true)
+                {
+                    //os métodos de pesquisa estão funcionais
 
-            Viagem pesquisar = new Viagem();
-            pesquisar.selectIDViagem(txtPesquisa.Text);
+                    Viagem pesquisar = new Viagem();
+                    pesquisar.selectIDViagem(txtPesquisa.Text);
 
-            txtIdViagem.Text = pesquisar.id_viagem;
-            txtHora.Text = pesquisar.hr_saida;
-            txtObs.Text = pesquisar.obs;
-            txtPrevChegada.Text = pesquisar.prev_chegada;
-            txtData.Text = pesquisar.data_saida;
-            txtDestino.Text = pesquisar.destino;
-            txtOrigem.Text = pesquisar.origem;
+                    txtIdViagem.Text = pesquisar.id_viagem;
+                    txtHora.Text = pesquisar.hr_saida;
+                    txtObs.Text = pesquisar.obs;
+                    txtPrevChegada.Text = pesquisar.prev_chegada;
+                    txtData.Text = pesquisar.data_saida;
+                    txtDestino.Text = pesquisar.destino;
+                    txtOrigem.Text = pesquisar.origem;
+                }
+                else if (rdOrigem.Checked == true)
+                {
+                    Viagem pesquisar = new Viagem();
+                    pesquisar.selectCidadeOrigem(txtPesquisa.Text);
 
+                    txtIdViagem.Text = pesquisar.id_viagem;
+                    txtHora.Text = pesquisar.hr_saida;
+                    txtObs.Text = pesquisar.obs;
+                    txtPrevChegada.Text = pesquisar.prev_chegada;
+                    txtData.Text = pesquisar.data_saida;
+                    txtDestino.Text = pesquisar.destino;
+                    txtOrigem.Text = pesquisar.origem;
+                }
+                else if (rdDestino.Checked == true)
+                {
+                    Viagem pesquisar = new Viagem();
+                    pesquisar.selectCidadeDestino(txtPesquisa.Text);
+
+                    txtIdViagem.Text = pesquisar.id_viagem;
+                    txtHora.Text = pesquisar.hr_saida;
+                    txtObs.Text = pesquisar.obs;
+                    txtPrevChegada.Text = pesquisar.prev_chegada;
+                    txtData.Text = pesquisar.data_saida;
+                    txtDestino.Text = pesquisar.destino;
+                    txtOrigem.Text = pesquisar.origem;
+                }
+            }
         }
 
         protected void btnExcluir_Click(object sender, EventArgs e)
@@ -76,6 +115,8 @@ namespace Projeto_Asp
                 Viagem delete = new Viagem();
                 delete.exclusaoViagem(txtIdViagem.Text);
                 lblMensagem.Text = "Viagem excluída com sucesso do sistema";
+                Limpar();
+                Desabilitar();
             }
             catch(Exception erro)
             {

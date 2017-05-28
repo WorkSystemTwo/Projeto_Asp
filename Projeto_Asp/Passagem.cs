@@ -9,7 +9,7 @@ namespace Projeto_Asp
 {
     public class Passagem
     {
-
+        
         public SqlConnection conexao = Banco.conexao;
 
         public string id_passagem, id_viagem, cpf_cliente, vlr_passagem, poltrona;        

@@ -9,8 +9,9 @@ namespace Projeto_Asp
 {
     public class Cliente
     {
-
+        
         public SqlConnection conexao = Banco.conexao;
+       
 
         public string cpf_cliente, nome, celular, rg, obs;
 
@@ -19,8 +20,9 @@ namespace Projeto_Asp
         {
 
             SqlCommand comando = new SqlCommand();
-
+            
             comando.Connection = conexao;
+           
 
             comando.CommandText = "INSERT INTO cliente (cpf_cliente, nome, celular, rg, obs) VALUES (@cpf_cliente, @nome, @celular, @rg, @obs)";
 
@@ -29,12 +31,14 @@ namespace Projeto_Asp
             comando.Parameters.AddWithValue("@celular", celular);
             comando.Parameters.AddWithValue("@rg", rg);
             comando.Parameters.AddWithValue("@obs", obs);
-
+            
             conexao.Open();
+           
 
             comando.ExecuteNonQuery();
 
             conexao.Close();
+           
 
         }
 
@@ -43,9 +47,13 @@ namespace Projeto_Asp
         {
             SqlCommand comando = new SqlCommand();
             SqlDataReader reg = null;
+            
             comando.Connection = conexao;
+          
             comando.CommandText = "SELECT * FROM cliente WHERE nome LIKE '" + pesquisa + "%'";
+        
             conexao.Open();
+          
             reg = comando.ExecuteReader();
 
             if (reg.Read())
@@ -56,20 +64,27 @@ namespace Projeto_Asp
                 rg = reg["rg"].ToString();
                 obs = reg["obs"].ToString();
             }
-
+            
             conexao.Close();
+           
         }
 
         //método para exclusão de clientes
         public void exclusaoCliente(string cpf)
         {
             SqlCommand comando = new SqlCommand();
+            
             comando.Connection = conexao;
+            
             comando.Parameters.AddWithValue("@cpf", cpf);
             comando.CommandText = "DELETE FROM cliente WHERE cpf_cliente=@cpf";
+            
             conexao.Open();
+           
             comando.ExecuteNonQuery();
+            
             conexao.Close();
+            
         }
 
         //construtor default
