@@ -48,8 +48,7 @@ namespace Projeto_Asp
 
             conexao.Open();
             comando.ExecuteNonQuery();
-            conexao.Close();
-           
+            conexao.Close();           
         }
 
         //método para pesquisa por CidadeOrigem
