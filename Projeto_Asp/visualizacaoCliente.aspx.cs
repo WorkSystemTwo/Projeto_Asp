@@ -16,11 +16,20 @@ namespace Projeto_Asp
 
         protected void btnEditar_Click(object sender, EventArgs e)
         {
-            Habilitar();
+            if (txtPesquisaNome.Text == "")
+            {
+                Label8.Text = "Para poder alterar, é preciso ter um registro!";
+                Label8.ForeColor = System.Drawing.Color.Red;
+            }
+            else
+            {
+                Habilitar();
+            }
         }
 
         protected void btnSalvar_Click(object sender, EventArgs e)
         {
+            
             Label8.Text = "Registro alterado com sucesso!";
             Label8.ForeColor = System.Drawing.Color.Green;
             Limpar();
@@ -75,6 +84,7 @@ namespace Projeto_Asp
             try
                 //if para tratamento de erro
             { 
+
                 if (txtPesquisaNome.Text == "")
             {
                 Label8.Text = "Digite um nome para pesquisar!";
@@ -89,6 +99,7 @@ namespace Projeto_Asp
                     txtCelular.Text = teste.celular;
                     txtRG.Text = teste.rg;
                 }
+                Label8.Text = "";
             }
             catch(Exception erro)
             {

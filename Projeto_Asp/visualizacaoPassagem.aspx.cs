@@ -16,7 +16,15 @@ namespace Projeto_Asp
 
         protected void btnEditar_Click(object sender, EventArgs e)
         {
-            Habilitar();   
+            if (txtPesquisa.Text == "")
+            {
+                Label5.Text = "Para poder alterar, é preciso ter um registro!";
+                Label5.ForeColor = System.Drawing.Color.Red;
+            }
+            else
+            {
+                Habilitar();
+            }   
         }       
 
         protected void btnCancelar_Click(object sender, EventArgs e)
@@ -66,9 +74,11 @@ namespace Projeto_Asp
 
         protected void btnPesquisar_Click(object sender, EventArgs e)
         {
+            Label5.Text = "";
             if (txtPesquisa.Text == "")
             {
                 Label5.Text = "Digite um parametro para poder pesquisar";
+                Label5.ForeColor = System.Drawing.Color.Red;
             }
             else
             {
