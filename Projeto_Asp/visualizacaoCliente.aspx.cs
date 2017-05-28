@@ -21,6 +21,7 @@ namespace Projeto_Asp
 
         protected void btnSalvar_Click(object sender, EventArgs e)
         {
+
             Label8.Text = "Registro alterado com sucesso!";
             Label8.ForeColor = System.Drawing.Color.Green;
             Limpar();
@@ -64,6 +65,10 @@ namespace Projeto_Asp
                 Cliente teste = new Cliente();
                 teste.pesquisaCliente(txtPesquisaNome.Text);
                 txtNome.Text = teste.nome;
+                txtCPF.Text = teste.cpf_cliente;
+                txtOBS.Text = teste.obs;
+                txtCelular.Text = teste.celular;
+                txtRG.Text =  teste.rg;
             }
             catch(Exception erro)
             {
