@@ -90,6 +90,7 @@ namespace Projeto_Asp
                 }
                 else
                 {
+                    Label5.Text = "";
                     //VERIFICAR QUAL RADIOBUTTON ESTA ATIVO E CHAMAR METODO
                     if (rdCPF.Checked == true)
                     {
