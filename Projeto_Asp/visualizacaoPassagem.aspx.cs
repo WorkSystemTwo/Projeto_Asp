@@ -35,19 +35,19 @@ namespace Projeto_Asp
 
         public void Habilitar()
         {
-            txtCodPassagem.Enabled = txtCodViagem.Enabled = txtCpf.Enabled = txtPoltrona.Enabled = true;
+            txtCodPassagem.Enabled = txtCodViagem.Enabled = txtCpf.Enabled = txtPoltrona.Enabled = txtVlrPassagem.Enabled= true;
             btnCancelar.Enabled = btnExcluir.Enabled = btnSalvar.Enabled = true;
         }
 
         public void Desabilitar()
         {
-            txtCodPassagem.Enabled = txtCodViagem.Enabled = txtCpf.Enabled = txtPoltrona.Enabled = false;
+            txtCodPassagem.Enabled = txtCodViagem.Enabled = txtCpf.Enabled = txtPoltrona.Enabled= txtVlrPassagem.Enabled = false;
             btnCancelar.Enabled = btnExcluir.Enabled = btnSalvar.Enabled = false;
         }
 
         public void Limpar()
         {
-            txtCodPassagem.Text = txtCodViagem.Text = txtCpf.Text = txtPoltrona.Text = txtPesquisa.Text = "";
+            txtCodPassagem.Text = txtCodViagem.Text = txtCpf.Text = txtPoltrona.Text = txtPesquisa.Text = txtVlrPassagem.Text = "";
         }
 
         public void MessagemSalvar()
@@ -66,16 +66,40 @@ namespace Projeto_Asp
 
         protected void btnPesquisar_Click(object sender, EventArgs e)
         {
-            //VERIFICAR QUAL RADIOBUTTON ESTA ATIVO E CHAMAR METODO
-            Passagem pesquisa = new Passagem();
-            pesquisa.pesquisaCPFCliente(txtPesquisa.Text);
+            if (rdCPF.Checked==false && rdIDViagem.Checked == false)
+            {
+                Label5.Text = "Seleciona uma uma Opção(Código da passagem ou cpf do passageiro!)";
+                Label5.ForeColor = System.Drawing.Color.Red;
+            }
+            else
+            {
+                //VERIFICAR QUAL RADIOBUTTON ESTA ATIVO E CHAMAR METODO
+                if (rdCPF.Checked == true)
+                {
+                    Passagem pesquisa = new Passagem();
+                    pesquisa.pesquisaCPFCliente(txtPesquisa.Text);
 
-            txtCodPassagem.Text = pesquisa.id_passagem;
-            txtCodViagem.Text = pesquisa.id_viagem;
-            txtCpf.Text = pesquisa.cpf_cliente;
-            txtPoltrona.Text = pesquisa.poltrona;
-            txtVlrPassagem.Text = pesquisa.vlr_passagem;
+                    txtCodPassagem.Text = pesquisa.id_passagem;
+                    txtCodViagem.Text = pesquisa.id_viagem;
+                    txtCpf.Text = pesquisa.cpf_cliente;
+                    txtPoltrona.Text = pesquisa.poltrona;
+                    txtVlrPassagem.Text = pesquisa.vlr_passagem;
 
+                }
+                else if (rdIDViagem.Checked == true)
+                {
+                    Passagem pesquisa2 = new Passagem();
+                    pesquisa2.pesquisaIdViagem(txtPesquisa.Text);
+
+                    txtCodPassagem.Text = pesquisa2.id_passagem;
+                    txtCodViagem.Text = pesquisa2.id_viagem;
+                    txtCpf.Text = pesquisa2.cpf_cliente;
+                    txtPoltrona.Text = pesquisa2.poltrona;
+                    txtVlrPassagem.Text = pesquisa2.vlr_passagem;
+                }
+
+            }
+           
         }
     }
 

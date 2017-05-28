@@ -60,7 +60,7 @@
             <br />
             <br />
             Valor Passagem:
-            <asp:TextBox ID="txtVlrPassagem" runat="server"></asp:TextBox>
+            <asp:TextBox ID="txtVlrPassagem" runat="server" Enabled="False"></asp:TextBox>
 
             <br />
             <br />
