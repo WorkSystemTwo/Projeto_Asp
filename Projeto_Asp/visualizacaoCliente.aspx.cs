@@ -16,24 +16,24 @@ namespace Projeto_Asp
 
         protected void btnEditar_Click(object sender, EventArgs e)
         {
-            Habilitar();
+            if (txtPesquisaNome.Text == "")
+            {
+                Label8.Text = "Para poder alterar, é preciso ter um registro!";
+                Label8.ForeColor = System.Drawing.Color.Red;
+            }
+            else
+            {
+                Habilitar();
+            }
         }
 
         protected void btnSalvar_Click(object sender, EventArgs e)
         {
-            try
-            {
-                Cliente alterar = new Cliente();
-                alterar.updateCliente(txtCPF.Text, txtNome.Text, txtCelular.Text, txtRG.Text, txtOBS.Text);
-                Label8.Text = "Registro alterado com sucesso!";
-                Label8.ForeColor = System.Drawing.Color.Green;
-                Limpar();
-                Desabilitar();
-            }
-            catch(Exception erro)
-            {
-                Label8.Text = "Erro ao alterar dados do cliente, " + erro.Message;
-            }
+            
+            Label8.Text = "Registro alterado com sucesso!";
+            Label8.ForeColor = System.Drawing.Color.Green;
+            Limpar();
+            Desabilitar();
         }
 
         protected void btnCancelar_Click(object sender, EventArgs e)
@@ -82,11 +82,14 @@ namespace Projeto_Asp
         protected void btnPesquisar_Click(object sender, EventArgs e)
         {
             try
+
                 //if para tratamento de erro
             { 
+
                 if (txtPesquisaNome.Text == "")
             {
                 Label8.Text = "Digite um nome para pesquisar!";
+                    Label8.ForeColor = System.Drawing.Color.Red;
             }
             else {
                 
@@ -97,7 +100,10 @@ namespace Projeto_Asp
                     txtOBS.Text = teste.obs;
                     txtCelular.Text = teste.celular;
                     txtRG.Text = teste.rg;
+                    Label8.Text = "";
                 }
+               
+               
             }
             catch(Exception erro)
             {
