@@ -16,7 +16,16 @@ namespace Projeto_Asp
 
         protected void btnAlterar_Click(object sender, EventArgs e)
         {
-            Habilitar();
+            if (txtPesquisa.Text == "")
+            {
+                lblMensagem.Text = "Selecione um registro para poder alterar!";
+                lblMensagem.ForeColor = System.Drawing.Color.Red;
+            }
+            else
+            {
+                Habilitar();
+                lblMensagem.Text = "";
+            }
         }
 
         protected void btnCancelar_Click(object sender, EventArgs e)
@@ -62,21 +71,24 @@ namespace Projeto_Asp
                 lblMensagem.Text= "Seleciode uma das opções para pesquisar (ID Viagem, Origem, Destino)";
                 lblMensagem.ForeColor = System.Drawing.Color.Red;
             }
-            else { 
+            else {
+                lblMensagem.Text = "";
                 if (rdId.Checked == true)
                 {
                     //os métodos de pesquisa estão funcionais
 
                     Viagem pesquisar = new Viagem();
                     pesquisar.selectIDViagem(txtPesquisa.Text);
+                    
 
-                    txtIdViagem.Text = pesquisar.id_viagem;
-                    txtHora.Text = pesquisar.hr_saida;
-                    txtObs.Text = pesquisar.obs;
-                    txtPrevChegada.Text = pesquisar.prev_chegada;
-                    txtData.Text = pesquisar.data_saida;
-                    txtDestino.Text = pesquisar.destino;
-                    txtOrigem.Text = pesquisar.origem;
+                        txtIdViagem.Text = pesquisar.id_viagem;
+                        txtHora.Text = pesquisar.hr_saida;
+                        txtObs.Text = pesquisar.obs;
+                        txtPrevChegada.Text = pesquisar.prev_chegada;
+                        txtData.Text = pesquisar.data_saida;
+                        txtDestino.Text = pesquisar.destino;
+                        txtOrigem.Text = pesquisar.origem;
+                    
                 }
                 else if (rdOrigem.Checked == true)
                 {
@@ -104,7 +116,9 @@ namespace Projeto_Asp
                     txtDestino.Text = pesquisar.destino;
                     txtOrigem.Text = pesquisar.origem;
                 }
+                
             }
+            
         }
 
         protected void btnExcluir_Click(object sender, EventArgs e)
