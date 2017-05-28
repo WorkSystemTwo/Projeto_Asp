@@ -48,7 +48,7 @@ namespace Projeto_Asp
             reg = comando.ExecuteReader();
             if (reg.Read())
             {
-                id_passagem = reg["id_passagen"].ToString();
+                id_passagem = reg["id_passagem"].ToString();
                 id_viagem = reg["id_viagem"].ToString();
                 cpf_cliente = reg["cpf_cliente"].ToString();
                 vlr_passagem = reg["vlr_passagem"].ToString();
