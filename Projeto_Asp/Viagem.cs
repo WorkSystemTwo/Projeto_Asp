@@ -10,7 +10,9 @@ namespace Projeto_Asp
     public class Viagem
     {
 
-        public SqlConnection conexao = Banco.conexao;              
+        public SqlConnection conexao = Banco.conexao;
+
+        public string id_viagem, origem, destino, data_saida, hr_saida, prev_chegada, obs;              
 
         //construtor para insercao de viagens
         public Viagem(string origem, string destino, string data_saida, string hr_saida, string prev_chegada, string obs)
@@ -36,18 +38,96 @@ namespace Projeto_Asp
 
         }
 
-        //método para delete de viagem
+        //método para exclusao de viagem
         public void exclusaoViagem(string id_viagem)
         {
             SqlCommand comando = new SqlCommand();
             comando.Connection = conexao;
             comando.Parameters.AddWithValue("@id_viagem", id_viagem);
             comando.CommandText = "DELETE FROM viagem WHERE id_viagem=@id_viagem";
+
             conexao.Open();
             comando.ExecuteNonQuery();
             conexao.Close();
+           
+        }
+
+        //método para pesquisa por CidadeOrigem
+        public void selectCidadeOrigem(string pesquisa)
+        {
+            SqlCommand comando = new SqlCommand();
+            comando.Connection = conexao;
+            comando.Parameters.AddWithValue("@origem", pesquisa);
+            SqlDataReader reg = null;
+            comando.CommandText = "SELECT * FROM viagem WHERE origem LIKE '" + pesquisa + "%'";
+            conexao.Open();
+            reg = comando.ExecuteReader();
+
+            if (reg.Read())
+            {
+                id_viagem = reg["id_viagem"].ToString();
+                origem = reg["origem"].ToString();
+                destino = reg["destino"].ToString();
+                data_saida = reg["data_saida"].ToString();
+                hr_saida = reg["hr_saida"].ToString();
+                prev_chegada = reg["prev_chegada"].ToString();
+                obs = reg["obs"].ToString();
+            }
+                        
+            conexao.Close();
+        }
+
+        //método para pesquisa por IDViagem
+        public void selectIDViagem(string pesquisa)
+        {
+            SqlCommand comando = new SqlCommand();
+            comando.Connection = conexao;
+            comando.Parameters.AddWithValue("@id_viagem", pesquisa);
+            SqlDataReader reg = null;
+            comando.CommandText = "SELECT * FROM viagem WHERE id_viagem LIKE '" + pesquisa + "%'";
+            conexao.Open();
+            reg = comando.ExecuteReader();
+
+            if (reg.Read())
+            {
+                id_viagem = reg["id_viagem"].ToString();
+                origem = reg["origem"].ToString();
+                destino = reg["destino"].ToString();
+                data_saida = reg["data_saida"].ToString();
+                hr_saida = reg["hr_saida"].ToString();
+                prev_chegada = reg["prev_chegada"].ToString();
+                obs = reg["obs"].ToString();
+            }
+
+            conexao.Close();
+        }
+
+        //método para pesquisa por CidadeDestino
+        public void selectCidadeDestino(string pesquisa)
+        {
+            SqlCommand comando = new SqlCommand();
+            comando.Connection = conexao;
+            comando.Parameters.AddWithValue("@destino", pesquisa);
+            SqlDataReader reg = null;
+            comando.CommandText = "SELECT * FROM viagem WHERE destino LIKE '" + pesquisa + "%'";
+            conexao.Open();
+            reg = comando.ExecuteReader();
+
+            if (reg.Read())
+            {
+                id_viagem = reg["id_viagem"].ToString();
+                origem = reg["origem"].ToString();
+                destino = reg["destino"].ToString();
+                data_saida = reg["data_saida"].ToString();
+                hr_saida = reg["hr_saida"].ToString();
+                prev_chegada = reg["prev_chegada"].ToString();
+                obs = reg["obs"].ToString();
+            }
+
+            conexao.Close();
         }
         
+        //construtor default
         public Viagem()
         {
 

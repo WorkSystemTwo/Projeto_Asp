@@ -36,7 +36,7 @@
                 <br />
                 <asp:TextBox ID="txtPesquisa" runat="server" Width="364px"></asp:TextBox>
                  &nbsp;
-                <asp:Button ID="btnPesquisar" runat="server" Text="Pesquisar" BorderStyle="None" Height="26px" />
+                <asp:Button ID="btnPesquisar" runat="server" Text="Pesquisar" BorderStyle="None" Height="26px" OnClick="btnPesquisar_Click" />
                 </b>
 
             </center>
@@ -45,7 +45,7 @@
         <br />
         
         <asp:Label ID="Label1" runat="server" Text="ID Viagem : "></asp:Label>
-        <asp:TextBox ID="txtIdViagem" runat="server" ReadOnly="True" Width="108px" Enabled="False"></asp:TextBox>
+        <asp:TextBox ID="txtIdViagem" runat="server" Width="108px" Enabled="False"></asp:TextBox>
             <br />
         <br />
         <asp:Label ID="Label2" runat="server" Text="Cidade Origem : "></asp:Label>
@@ -56,7 +56,7 @@
             <br />
         <br />
         <asp:Label ID="Label4" runat="server" Text="Data Viagem : "></asp:Label>
-        <asp:TextBox ID="txtData" runat="server" TextMode="Date" Enabled="False"></asp:TextBox>
+        <asp:TextBox ID="txtData" runat="server" Enabled="False"></asp:TextBox>
         &nbsp;
         <asp:Label ID="Label5" runat="server" Text="Hora Viagem : "></asp:Label>
         <asp:TextBox ID="txtHora" runat="server" Enabled="False"></asp:TextBox>
@@ -82,7 +82,7 @@
 
             &nbsp;
 
-            <asp:Button ID="btnExcluir" runat="server" BorderStyle="None" Enabled="False" Text="Excluir" Height="25px" />
+            <asp:Button ID="btnExcluir" runat="server" BorderStyle="None" Enabled="False" Text="Excluir" Height="25px" OnClick="btnExcluir_Click" />
 &nbsp;<asp:Button ID="btnCancelar" runat="server" Text="Cancelar" BorderStyle="None" Height="25px" Enabled="False" OnClick="btnCancelar_Click" /></asp:Button>
             
             <br />

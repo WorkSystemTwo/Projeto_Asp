@@ -51,5 +51,37 @@ namespace Projeto_Asp
 
         }
 
+        protected void btnPesquisar_Click(object sender, EventArgs e)
+        {
+            //os métodos de pesquisa estão funcionais
+
+            Viagem pesquisar = new Viagem();
+            pesquisar.selectIDViagem(txtPesquisa.Text);
+
+            txtIdViagem.Text = pesquisar.id_viagem;
+            txtHora.Text = pesquisar.hr_saida;
+            txtObs.Text = pesquisar.obs;
+            txtPrevChegada.Text = pesquisar.prev_chegada;
+            txtData.Text = pesquisar.data_saida;
+            txtDestino.Text = pesquisar.destino;
+            txtOrigem.Text = pesquisar.origem;
+
+        }
+
+        protected void btnExcluir_Click(object sender, EventArgs e)
+        {
+            // o método está funcionando, falta tratar
+            try
+            {
+                Viagem delete = new Viagem();
+                delete.exclusaoViagem(txtIdViagem.Text);
+                lblMensagem.Text = "Viagem excluída com sucesso do sistema";
+            }
+            catch(Exception erro)
+            {
+                lblMensagem.Text = "Erro ao excluir viagem, " + erro.Message;
+            }                       
+
+        }
     }
 }
