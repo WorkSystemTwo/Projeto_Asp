@@ -53,7 +53,7 @@
         <br />
         <br />
 
-            <li><b> <a href="visualizacaoPassagem.aspx" target="lado_direito"> Visualizar Viagens</a></b></li>
+            <li><b> <a href="visualizacaoPassagem.aspx" target="lado_direito"> Visualizar Passagem</a></b></li>
             
         <br />     
             
