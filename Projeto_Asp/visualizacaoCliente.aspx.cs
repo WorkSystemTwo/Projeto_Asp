@@ -49,6 +49,8 @@ namespace Projeto_Asp
         public void Limpar()
         {
             txtCelular.Text = txtCPF.Text = txtNome.Text = txtOBS.Text = txtPesquisaNome.Text = txtRG.Text = "";
+            txtPesquisaNome.Focus();
+          
         }
 
         protected void btnExcluir_Click(object sender, EventArgs e)
@@ -71,14 +73,22 @@ namespace Projeto_Asp
         protected void btnPesquisar_Click(object sender, EventArgs e)
         {
             try
+                //if para tratamento de erro
+            { 
+                if (txtPesquisaNome.Text == "")
             {
-                Cliente teste = new Cliente();
-                teste.pesquisaCliente(txtPesquisaNome.Text);
-                txtNome.Text = teste.nome;
-                txtCPF.Text = teste.cpf_cliente;
-                txtOBS.Text = teste.obs;
-                txtCelular.Text = teste.celular;
-                txtRG.Text = teste.rg;
+                Label8.Text = "Digite um nome para pesquisar!";
+            }
+            else {
+                
+                    Cliente teste = new Cliente();
+                    teste.pesquisaCliente(txtPesquisaNome.Text);
+                    txtNome.Text = teste.nome;
+                    txtCPF.Text = teste.cpf_cliente;
+                    txtOBS.Text = teste.obs;
+                    txtCelular.Text = teste.celular;
+                    txtRG.Text = teste.rg;
+                }
             }
             catch(Exception erro)
             {
