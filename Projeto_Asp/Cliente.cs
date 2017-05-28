@@ -93,6 +93,28 @@ namespace Projeto_Asp
 
         }
 
+        //método para alterar cliente
+        public void updateCliente(string cpf_cliente, string nome, string celular, string rg, string obs)
+        {
+            SqlCommand comando = new SqlCommand();
+            comando.Connection = conexao;
+
+            comando.CommandText = "UPDATE cliente SET cpf_cliente=@cpf_cliente, nome=@nome, celular=@celular, rg=@rg, obs=@obs";
+
+            comando.Parameters.AddWithValue("@cpf_cliente", cpf_cliente);
+            comando.Parameters.AddWithValue("@nome", nome);
+            comando.Parameters.AddWithValue("@celular", celular);
+            comando.Parameters.AddWithValue("@rg", rg);
+            comando.Parameters.AddWithValue("@obs", obs);
+
+            conexao.Open();
+
+            comando.ExecuteNonQuery();
+
+            conexao.Close();
+
+        }
+
 
     }
 }

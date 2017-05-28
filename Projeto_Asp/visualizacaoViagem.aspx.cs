@@ -37,14 +37,10 @@ namespace Projeto_Asp
 
         protected void btnSalvar_Click(object sender, EventArgs e)
         {
-          
-           
- 
                 lblMensagem.Text = "Registro alterado com sucesso!";
                 lblMensagem.ForeColor = System.Drawing.Color.Green;
                 Desabilitar();
-                Limpar();
-           
+                Limpar();           
         }
 
         public void Habilitar()//metodo para habilitar textbox e botoes
@@ -74,9 +70,7 @@ namespace Projeto_Asp
             else {
                 lblMensagem.Text = "";
                 if (rdId.Checked == true)
-                {
-                    //os métodos de pesquisa estão funcionais
-
+                {                   
                     Viagem pesquisar = new Viagem();
                     pesquisar.selectIDViagem(txtPesquisa.Text);
                     
@@ -87,8 +81,7 @@ namespace Projeto_Asp
                         txtPrevChegada.Text = pesquisar.prev_chegada;
                         txtData.Text = pesquisar.data_saida;
                         txtDestino.Text = pesquisar.destino;
-                        txtOrigem.Text = pesquisar.origem;
-                    
+                        txtOrigem.Text = pesquisar.origem;                    
                 }
                 else if (rdOrigem.Checked == true)
                 {
