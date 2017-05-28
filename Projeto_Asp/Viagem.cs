@@ -35,6 +35,18 @@ namespace Projeto_Asp
             conexao.Close();
 
         }
+
+        //método para delete de viagem
+        public void exclusaoViagem(string id_viagem)
+        {
+            SqlCommand comando = new SqlCommand();
+            comando.Connection = conexao;
+            comando.Parameters.AddWithValue("@id_viagem", id_viagem);
+            comando.CommandText = "DELETE FROM viagem WHERE id_viagem=@id_viagem";
+            conexao.Open();
+            comando.ExecuteNonQuery();
+            conexao.Close();
+        }
         
         public Viagem()
         {

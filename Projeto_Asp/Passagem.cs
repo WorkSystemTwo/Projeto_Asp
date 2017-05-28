@@ -79,6 +79,18 @@ namespace Projeto_Asp
             conexao.Close();
         }
 
+        //método para exclusao de passagens
+        public void exclusaoPassagem(string id_passagem)
+        {
+            SqlCommand comando = new SqlCommand();
+            comando.Connection = conexao;
+            comando.Parameters.AddWithValue("@id_passagem", id_passagem);
+            comando.CommandText = "DELETE FROM passagem WHERE id_passagem=@id_passagem";
+            conexao.Open();
+            comando.ExecuteNonQuery();
+            conexao.Close();
+        }
+
         //construtor default
         public Passagem()
         {

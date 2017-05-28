@@ -52,9 +52,20 @@ namespace Projeto_Asp
         }
 
         protected void btnExcluir_Click(object sender, EventArgs e)
-        {                     
-            Limpar();
-            Desabilitar();
+        {              
+            try
+            {
+                Cliente delete = new Cliente();
+                delete.exclusaoCliente(txtCPF.Text.ToString());
+                Limpar();
+                Desabilitar();
+                Label8.Text = "Cliente excluído com Sucesso";
+            }   
+            catch(Exception erro)
+            {
+                Label8.Text = "Erro ao excluir cliente, " + erro.Message;
+            }    
+
         }
 
         protected void btnPesquisar_Click(object sender, EventArgs e)
@@ -64,10 +75,14 @@ namespace Projeto_Asp
                 Cliente teste = new Cliente();
                 teste.pesquisaCliente(txtPesquisaNome.Text);
                 txtNome.Text = teste.nome;
+                txtCPF.Text = teste.cpf_cliente;
+                txtOBS.Text = teste.obs;
+                txtCelular.Text = teste.celular;
+                txtRG.Text = teste.rg;
             }
             catch(Exception erro)
             {
-                Label8.Text = erro.Message;
+                Label8.Text = "Erro ao pesquisar cliente, " + erro.Message;
             }      
         }
     }

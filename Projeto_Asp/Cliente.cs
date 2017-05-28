@@ -60,13 +60,13 @@ namespace Projeto_Asp
             conexao.Close();
         }
 
-        //método para exclusão de clientes - EM ANDAMENTO - NAO USAR
+        //método para exclusão de clientes
         public void exclusaoCliente(string cpf)
         {
             SqlCommand comando = new SqlCommand();
             comando.Connection = conexao;
             comando.Parameters.AddWithValue("@cpf", cpf);
-            comando.CommandText = "DELETE FROM cliente WHERE cpf=@cpf";
+            comando.CommandText = "DELETE FROM cliente WHERE cpf_cliente=@cpf";
             conexao.Open();
             comando.ExecuteNonQuery();
             conexao.Close();
