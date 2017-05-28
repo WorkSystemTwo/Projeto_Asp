@@ -99,7 +99,7 @@ namespace Projeto_Asp
             SqlCommand comando = new SqlCommand();
             comando.Connection = conexao;
 
-            comando.CommandText = "UPDATE cliente SET cpf_cliente=@cpf_cliente, nome=@nome, celular=@celular, rg=@rg, obs=@obs";
+            comando.CommandText = "UPDATE cliente SET cpf_cliente=@cpf_cliente, nome=@nome, celular=@celular, rg=@rg, obs=@obs WHERE cpf_cliente=@cpf_cliente";
 
             comando.Parameters.AddWithValue("@cpf_cliente", cpf_cliente);
             comando.Parameters.AddWithValue("@nome", nome);
@@ -108,11 +108,8 @@ namespace Projeto_Asp
             comando.Parameters.AddWithValue("@obs", obs);
 
             conexao.Open();
-
             comando.ExecuteNonQuery();
-
             conexao.Close();
-
         }
 
 

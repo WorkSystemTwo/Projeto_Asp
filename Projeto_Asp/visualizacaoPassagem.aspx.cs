@@ -28,9 +28,18 @@ namespace Projeto_Asp
 
         protected void btnSalvar_Click(object sender, EventArgs e)
         {
-            Desabilitar();
-            Limpar();
-            MessagemSalvar();
+            try
+            {
+                Passagem update = new Passagem();
+                update.updatePassagem(int.Parse(txtCodPassagem.Text), int.Parse(txtCodViagem.Text), txtCpf.Text, double.Parse(txtVlrPassagem.Text), int.Parse(txtPoltrona.Text));
+                Desabilitar();
+                Limpar();
+                MessagemSalvar();
+            }
+            catch(Exception erro)
+            {
+                Label5.Text = "Erro ao excluir Passagem, " + erro.Message;
+            }
         }
 
         public void Habilitar()
@@ -52,16 +61,25 @@ namespace Projeto_Asp
 
         public void MessagemSalvar()
         {
-            Label5.Text = "Registro inserido com sucesso!";
+            Label5.Text = "Registro Alterado com sucesso!";
             Label5.ForeColor = System.Drawing.Color.Green;
         }
 
         protected void btnExcluir_Click(object sender, EventArgs e)
         {
-            Desabilitar();
-            Limpar();
-            Label5.Text = "Registro excluido com sucesso!";
-            Label5.ForeColor = System.Drawing.Color.Green;
+            try
+            {
+                Passagem delete = new Passagem();
+                delete.exclusaoPassagem(txtCodPassagem.Text);
+                Desabilitar();
+                Limpar();
+                Label5.Text = "Registro excluido com sucesso!";
+                Label5.ForeColor = System.Drawing.Color.Green;
+            }
+            catch (Exception erro)
+            {
+                Label5.Text = "Erro ao excluir Passagem," + erro.Message;
+            }
         }
 
         protected void btnPesquisar_Click(object sender, EventArgs e)
@@ -91,6 +109,7 @@ namespace Projeto_Asp
                         txtCpf.Text = pesquisa.cpf_cliente;
                         txtPoltrona.Text = pesquisa.poltrona;
                         txtVlrPassagem.Text = pesquisa.vlr_passagem;
+                        rdCPF.Checked = false;
 
                     }
                     else if (rdIDViagem.Checked == true)
@@ -103,11 +122,11 @@ namespace Projeto_Asp
                         txtCpf.Text = pesquisa2.cpf_cliente;
                         txtPoltrona.Text = pesquisa2.poltrona;
                         txtVlrPassagem.Text = pesquisa2.vlr_passagem;
+                        rdIDViagem.Checked = false;
                     }
                 }
 
             }
-
             
         }
     }

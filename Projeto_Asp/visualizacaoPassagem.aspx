@@ -49,13 +49,13 @@
             <br />
             <br />
         <asp:Label ID="Label2" runat="server" Text="Código Viagem:"></asp:Label>
-&nbsp;<asp:TextBox ID="txtCodViagem" runat="server" Width="72px" Enabled="False"></asp:TextBox>
+&nbsp;<asp:TextBox ID="txtCodViagem" runat="server" Width="72px" Enabled="False" ReadOnly="True"></asp:TextBox>
         
       
         <br />
         <br />
         <asp:Label ID="Label3" runat="server" Text="CPF:"></asp:Label>
-&nbsp;<asp:TextBox ID="txtCpf" runat="server" Width="140px" Enabled="False"></asp:TextBox>
+&nbsp;<asp:TextBox ID="txtCpf" runat="server" Width="140px" Enabled="False" ReadOnly="True"></asp:TextBox>
 
             <br />
             <br />

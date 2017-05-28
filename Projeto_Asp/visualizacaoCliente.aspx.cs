@@ -21,10 +21,19 @@ namespace Projeto_Asp
 
         protected void btnSalvar_Click(object sender, EventArgs e)
         {
-            Label8.Text = "Registro alterado com sucesso!";
-            Label8.ForeColor = System.Drawing.Color.Green;
-            Limpar();
-            Desabilitar();
+            try
+            {
+                Cliente alterar = new Cliente();
+                alterar.updateCliente(txtCPF.Text, txtNome.Text, txtCelular.Text, txtRG.Text, txtOBS.Text);
+                Label8.Text = "Registro alterado com sucesso!";
+                Label8.ForeColor = System.Drawing.Color.Green;
+                Limpar();
+                Desabilitar();
+            }
+            catch(Exception erro)
+            {
+                Label8.Text = "Erro ao alterar dados do cliente, " + erro.Message;
+            }
         }
 
         protected void btnCancelar_Click(object sender, EventArgs e)

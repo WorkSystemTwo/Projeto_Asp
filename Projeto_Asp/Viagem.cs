@@ -132,5 +132,26 @@ namespace Projeto_Asp
 
         }
 
+        //método para alterar dados viagem
+        public void updateViagem(int id_viagem, string origem, string destino, DateTime data_saida, DateTime hr_saida, DateTime prev_chegada, string obs)
+        {
+            SqlCommand comando = new SqlCommand();
+            comando.Connection = conexao;
+
+            comando.CommandText = "UPDATE viagem SET origem=@origem, destino=@destino, data_saida=@data_saida, hr_saida=@hr_saida, prev_chegada=@prev_chegada, obs=@obs WHERE id_viagem=@id_viagem";
+
+            comando.Parameters.AddWithValue("@id_viagem", id_viagem);
+            comando.Parameters.AddWithValue("@origem", origem);
+            comando.Parameters.AddWithValue("@destino", destino);
+            comando.Parameters.AddWithValue("@data_saida", data_saida);
+            comando.Parameters.AddWithValue("@hr_saida", hr_saida);
+            comando.Parameters.AddWithValue("@prev_chegada", prev_chegada);
+            comando.Parameters.AddWithValue("@obs", obs);
+
+            conexao.Open();
+            comando.ExecuteNonQuery();
+            conexao.Close();
+        }
+
     }
 }

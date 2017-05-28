@@ -37,10 +37,19 @@ namespace Projeto_Asp
 
         protected void btnSalvar_Click(object sender, EventArgs e)
         {
+            try
+            {
+                Viagem update = new Viagem();
+                update.updateViagem(int.Parse(txtIdViagem.Text), txtOrigem.Text, txtDestino.Text, DateTime.Parse(txtData.Text), DateTime.Parse(txtHora.Text), DateTime.Parse(txtPrevChegada.Text), txtObs.Text);
                 lblMensagem.Text = "Registro alterado com sucesso!";
                 lblMensagem.ForeColor = System.Drawing.Color.Green;
                 Desabilitar();
-                Limpar();           
+                Limpar();
+            }
+            catch(Exception erro)
+            {
+                lblMensagem.Text = "Erro ao alterar dados da viagem, " + erro.Message;
+            }        
         }
 
         public void Habilitar()//metodo para habilitar textbox e botoes
@@ -116,7 +125,7 @@ namespace Projeto_Asp
 
         protected void btnExcluir_Click(object sender, EventArgs e)
         {
-            // o método está funcionando, falta tratar
+            
             try
             {
                 Viagem delete = new Viagem();
