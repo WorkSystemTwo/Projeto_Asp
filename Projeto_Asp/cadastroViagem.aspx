@@ -25,7 +25,7 @@
         <div id="escritaPagina">
 
         <asp:Label ID="Label1" runat="server" Text="ID Viagem : "></asp:Label>
-        <asp:TextBox ID="txtIdViagem" runat="server" ReadOnly="True" Width="108px"></asp:TextBox>
+        <asp:TextBox ID="txtIdViagem" runat="server" ReadOnly="True" Width="108px" Enabled="False"></asp:TextBox>
         <br />
         <br />
         <asp:Label ID="Label2" runat="server" Text="Cidade Origem : "></asp:Label>

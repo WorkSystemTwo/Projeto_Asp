@@ -20,10 +20,10 @@ namespace Projeto_Asp
                 //carregamento de dados para inserção de passagens
 
                 //string connection JP
-                //SqlConnection conexao = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\João Paulo\Source\Repos\Projeto_Asp\Projeto_Asp\App_Data\BD.mdf;Integrated Security=True");
+                SqlConnection conexao = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\João Paulo\Source\Repos\Projeto_Asp\Projeto_Asp\App_Data\BD.mdf;Integrated Security=True");
 
                 //string connection THIAGAO
-                SqlConnection conexao = new SqlConnection(@"");
+               // SqlConnection conexao = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Thiago_2\Source\Repos\Projeto_Asp\Projeto_Asp\App_Data\BD.mdf;Integrated Security=True");
 
                 SqlCommand comando = new SqlCommand();
                 comando.Connection = conexao;
@@ -55,6 +55,31 @@ namespace Projeto_Asp
                 lblMensagem.Text = " Erro ao puxar dados,  " + erro.Message;
             }
 
+
+            //código para puxar id disponivel
+            //string connection JP
+           SqlConnection conexao3 = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\João Paulo\Source\Repos\Projeto_Asp\Projeto_Asp\App_Data\BD.mdf;Integrated Security=True");
+            SqlCommand comando3 = new SqlCommand("SELECT  MAX(id_passagem +1) AS id_passagem from passagem", conexao3);
+            DataSet ds = new DataSet();
+            conexao3.Open();
+            if (conexao3.State == ConnectionState.Open)
+            {
+                txtIdPassagem.Text = comando3.ExecuteScalar().ToString();
+            }
+            
+
+            //código para puxar id disponivel
+            //string connection Thiago
+            /* SqlConnection conexao3 = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Thiago_2\Source\Repos\Projeto_Asp\Projeto_Asp\App_Data\BD.mdf;Integrated Security=True");
+             SqlCommand comando3 = new SqlCommand("SELECT  MAX(id_passagem +1) AS id_passagem from passagem", conexao3);
+             DataSet ds = new DataSet();
+             conexao3.Open();
+             if (conexao3.State == ConnectionState.Open)
+             {
+                 txtIdPassagem.Text= comando3.ExecuteScalar().ToString();
+             }
+             */
+
         }
 
         protected void btnNovo_Click(object sender, EventArgs e)
@@ -81,11 +106,15 @@ namespace Projeto_Asp
             btnNovo.Enabled = false;
             Label5.Visible = true;
             txtCPF.Visible = true;
+            txtNomeCliente.Enabled = true;
+            txtIdPassagem.Enabled = true;
+            listViagem.Enabled = true;
             txtCPF.Focus();
         }
         //function for button save and cancel
         private void salvar_cancelar()
         {
+            txtIdPassagem.Enabled = false;
             txtCPF.Enabled = false;
             txtCPF.Text = "";
             txtNomeCliente.Enabled = false;
@@ -98,6 +127,7 @@ namespace Projeto_Asp
             btnCancelar.Enabled = false;
             btnNovo.Enabled = true;
             btnVerificar.Visible = false;
+            listViagem.Enabled = false;
             Label5.Visible = false;
             txtCPF.Visible = false;
         }

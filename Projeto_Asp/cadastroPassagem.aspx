@@ -26,13 +26,13 @@
 
         <asp:Label ID="Label1" runat="server" Text="Cod Passagem : "></asp:Label>
         &nbsp;
-        <asp:TextBox ID="txtIdPassagem" runat="server" ReadOnly="true" Width="65px"></asp:TextBox>
+        <asp:TextBox ID="txtIdPassagem" runat="server" ReadOnly="true" Width="65px" Enabled="False"></asp:TextBox>
         <br />
         <br />
 
         <asp:Label ID="Label3" runat="server" Text="Viagem :"></asp:Label>
         &nbsp;
-            <asp:DropDownList ID="listViagem" runat="server" Height="20px" Width="416px">
+            <asp:DropDownList ID="listViagem" runat="server" Height="20px" Width="416px" Enabled="False">
             </asp:DropDownList>
         <br />
         <br />
@@ -51,7 +51,7 @@
 
         <asp:Label ID="Label2" runat="server" Text="Nome Cliente : " ReadOnly="true"></asp:Label>
         &nbsp;
-        <asp:TextBox ID="txtNomeCliente" runat="server" Width="316px"></asp:TextBox>
+        <asp:TextBox ID="txtNomeCliente" runat="server" Width="316px" Enabled="False"></asp:TextBox>
         &nbsp;
         <asp:Button ID="btnVerificar" runat="server" Text="Verificar Cliente" BorderStyle="None" Height="27px" Visible="False" OnClick="btnVerificar_Click" />
         <br />

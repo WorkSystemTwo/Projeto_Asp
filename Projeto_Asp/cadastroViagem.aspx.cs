@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Data;
+using System.Data.SqlClient;
 
 namespace Projeto_Asp
 {
@@ -11,7 +13,14 @@ namespace Projeto_Asp
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            SqlConnection conexao3 = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Thiago_2\Source\Repos\Projeto_Asp\Projeto_Asp\App_Data\BD.mdf;Integrated Security=True");
+            SqlCommand comando3 = new SqlCommand("SELECT  MAX(id_viagem +1) AS id_viagem from viagem", conexao3);
+            DataSet ds = new DataSet();
+            conexao3.Open();
+            if (conexao3.State == ConnectionState.Open)
+            {
+                txtIdViagem.Text = comando3.ExecuteScalar().ToString();
+            }
         }
 
         protected void btnNovo_Click(object sender, EventArgs e)
@@ -36,19 +45,19 @@ namespace Projeto_Asp
 
         public void Habilitar()// Método para habilitar botoes e text boxs.
         {
-            txtData.Enabled = txtDestino.Enabled = txtHora.Enabled = txtIdViagem.Enabled = txtObs.Enabled = txtObs.Enabled = txtOrigem.Enabled = txtPrevChegada.Enabled = true;
+            txtData.Enabled = txtDestino.Enabled = txtHora.Enabled =  txtObs.Enabled = txtObs.Enabled = txtOrigem.Enabled = txtPrevChegada.Enabled = true;
             btnCadastrar.Enabled = btnCancelar.Enabled = true;
         }
 
         public void Desabilitar() // Método para desabilitar botoes e text boxs.
         {
-            txtData.Enabled = txtDestino.Enabled = txtHora.Enabled = txtIdViagem.Enabled = txtObs.Enabled = txtObs.Enabled = txtOrigem.Enabled = txtPrevChegada.Enabled = false;
+            txtData.Enabled = txtDestino.Enabled = txtHora.Enabled = txtObs.Enabled = txtObs.Enabled = txtOrigem.Enabled = txtPrevChegada.Enabled = false;
             btnCadastrar.Enabled = btnCancelar.Enabled = false;
         }
 
         public void Limpar() // Método para limpar txts.
         {
-            txtData.Text = txtDestino.Text = txtHora.Text = txtIdViagem.Text = txtObs.Text = txtOrigem.Text = txtPrevChegada.Text = "";
+            txtData.Text = txtDestino.Text = txtHora.Text =  txtObs.Text = txtOrigem.Text = txtPrevChegada.Text = "";
         }
     }
 }

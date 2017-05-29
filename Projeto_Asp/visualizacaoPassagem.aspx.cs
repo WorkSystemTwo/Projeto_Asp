@@ -16,7 +16,8 @@ namespace Projeto_Asp
 
         protected void btnEditar_Click(object sender, EventArgs e)
         {
-            if (txtPesquisa.Text == "")
+            // tratamento de erro, para o usuario nao alterar com os campos em branco
+            if (txtCodPassagem.Text == "")
             {
                 Label5.Text = "Para poder alterar, é preciso ter um registro!";
                 Label5.ForeColor = System.Drawing.Color.Red;

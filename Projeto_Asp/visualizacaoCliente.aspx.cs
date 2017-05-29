@@ -16,7 +16,8 @@ namespace Projeto_Asp
 
         protected void btnEditar_Click(object sender, EventArgs e)
         {
-            if (txtPesquisaNome.Text == "")
+            // tratamento de erro, para o usuario nao alterar com os campos em branco
+            if (txtCPF.Text == "")
             {
                 Label8.Text = "Para poder alterar, é preciso ter um registro!";
                 Label8.ForeColor = System.Drawing.Color.Red;
@@ -91,7 +92,8 @@ namespace Projeto_Asp
                 Label8.Text = "Digite um nome para pesquisar!";
                     Label8.ForeColor = System.Drawing.Color.Red;
             }
-            else {
+             
+                else {
                 
                     Cliente teste = new Cliente();
                     teste.pesquisaCliente(txtPesquisaNome.Text);

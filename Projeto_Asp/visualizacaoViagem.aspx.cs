@@ -16,8 +16,9 @@ namespace Projeto_Asp
 
         protected void btnAlterar_Click(object sender, EventArgs e)
         {
-            if (txtPesquisa.Text == "")
+            if (txtIdViagem.Text == "")
             {
+                // tratamento de erro, para o usuario nao alterar com os campos em branco
                 lblMensagem.Text = "Selecione um registro para poder alterar!";
                 lblMensagem.ForeColor = System.Drawing.Color.Red;
             }
@@ -54,13 +55,13 @@ namespace Projeto_Asp
 
         public void Habilitar()//metodo para habilitar textbox e botoes
         {
-            txtData.Enabled = txtDestino.Enabled = txtHora.Enabled = txtIdViagem.Enabled = txtObs.Enabled = txtOrigem.Enabled = txtPrevChegada.Enabled = true;
+            txtData.Enabled = txtDestino.Enabled = txtHora.Enabled = txtObs.Enabled = txtOrigem.Enabled = txtPrevChegada.Enabled = true;
             btnCancelar.Enabled = btnSalvar.Enabled = btnExcluir.Enabled = true;
         }
 
         public void Desabilitar()//metodo para desabilitar textbox e botoes
         {
-            txtData.Enabled = txtDestino.Enabled = txtHora.Enabled = txtIdViagem.Enabled = txtObs.Enabled = txtOrigem.Enabled = txtPrevChegada.Enabled = false;
+            txtData.Enabled = txtDestino.Enabled = txtHora.Enabled =  txtObs.Enabled = txtOrigem.Enabled = txtPrevChegada.Enabled = false;
             btnCancelar.Enabled = btnSalvar.Enabled = btnExcluir.Enabled = false;
         }
         public void Limpar()//metodo para limpar textbox

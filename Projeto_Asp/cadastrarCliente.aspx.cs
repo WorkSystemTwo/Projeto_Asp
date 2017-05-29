@@ -33,12 +33,14 @@ namespace Projeto_Asp
             {
                 Cliente insert = new Cliente(txtCpf.Text, txtNome.Text, txtCelular.Text, txtRg.Text, txtObs.Text);
                 lblMensagem.Text = "Cliente inserido com Sucesso";
+                lblMensagem.ForeColor = System.Drawing.Color.Green;
                 save_cancel();                
             }
 
             catch (Exception erro)
             {
                 lblMensagem.Text = "Erro ao inserir cliente, favor verificar dados! Erro -> " + erro.Message;
+                lblMensagem.ForeColor = System.Drawing.Color.Red;
             }
 
         }
