@@ -54,21 +54,6 @@
         &nbsp;
         <asp:TextBox ID="txtValorPassagem" runat="server" Enabled="False" Width="78px"></asp:TextBox>
             <br />
-            <br />
-            Informações Viagem:<br />
-            <br />
-            Origem:
-            <asp:Label ID="lblOrigem" runat="server" Text="**"></asp:Label>
-            <br />
-            Destino:
-            <asp:Label ID="lblDestino" runat="server" Text="**"></asp:Label>
-            <br />
-            Hora Saída:
-            <asp:Label ID="lblHora" runat="server" Text="**"></asp:Label>
-            <br />
-            Data:
-            <asp:Label ID="lblData" runat="server" Text="**"></asp:Label>
-        <br />
         <br />
 
         <asp:Label ID="Label2" runat="server" Text="Nome Cliente : " ReadOnly="true"></asp:Label>
