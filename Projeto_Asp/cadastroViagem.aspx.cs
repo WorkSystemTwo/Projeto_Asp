@@ -13,13 +13,17 @@ namespace Projeto_Asp
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            SqlConnection conexao3 = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Thiago_2\Source\Repos\Projeto_Asp\Projeto_Asp\App_Data\BD.mdf;Integrated Security=True");
-            SqlCommand comando3 = new SqlCommand("SELECT  MAX(id_viagem +1) AS id_viagem from viagem", conexao3);
+            //Conexao JP
+            SqlConnection conexao = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\João Paulo\Source\Repos\Projeto_Asp\Projeto_Asp\App_Data\BD.mdf;Integrated Security=True");
+            //Conexao Thiago
+            //SqlConnection conexao = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Thiago_2\Source\Repos\Projeto_Asp\Projeto_Asp\App_Data\BD.mdf;Integrated Security=True");
+
+            SqlCommand comando = new SqlCommand("SELECT  MAX(id_viagem +1) AS id_viagem FROM viagem", conexao);
             DataSet ds = new DataSet();
-            conexao3.Open();
-            if (conexao3.State == ConnectionState.Open)
+            conexao.Open();
+            if (conexao.State == ConnectionState.Open)
             {
-                txtIdViagem.Text = comando3.ExecuteScalar().ToString();
+                txtIdViagem.Text = comando.ExecuteScalar().ToString();
             }
         }
 

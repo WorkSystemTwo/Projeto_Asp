@@ -32,7 +32,7 @@
 
         <asp:Label ID="Label3" runat="server" Text="Viagem :"></asp:Label>
         &nbsp;
-            <asp:DropDownList ID="listViagem" runat="server" Height="20px" Width="416px" Enabled="False">
+            <asp:DropDownList ID="listViagem" runat="server" Height="21px" Width="308px" Enabled="False">
             </asp:DropDownList>
         <br />
         <br />
@@ -46,6 +46,21 @@
         <asp:Label ID="Label6" runat="server" Text="Valor Passagem : "></asp:Label>
         &nbsp;
         <asp:TextBox ID="txtValorPassagem" runat="server" Enabled="False" Width="78px"></asp:TextBox>
+            <br />
+            <br />
+            Informações Viagem:<br />
+            <br />
+            Origem:
+            <asp:Label ID="lblOrigem" runat="server" Text="**"></asp:Label>
+            <br />
+            Destino:
+            <asp:Label ID="lblDestino" runat="server" Text="**"></asp:Label>
+            <br />
+            Hora Saída:
+            <asp:Label ID="lblHora" runat="server" Text="**"></asp:Label>
+            <br />
+            Data:
+            <asp:Label ID="lblData" runat="server" Text="**"></asp:Label>
         <br />
         <br />
 

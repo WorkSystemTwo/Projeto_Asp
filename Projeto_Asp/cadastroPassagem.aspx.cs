@@ -54,32 +54,23 @@ namespace Projeto_Asp
             {
                 lblMensagem.Text = " Erro ao puxar dados,  " + erro.Message;
             }
-
-
+            
             //código para puxar id disponivel
             //string connection JP
-           SqlConnection conexao3 = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\João Paulo\Source\Repos\Projeto_Asp\Projeto_Asp\App_Data\BD.mdf;Integrated Security=True");
-            SqlCommand comando3 = new SqlCommand("SELECT  MAX(id_passagem +1) AS id_passagem from passagem", conexao3);
-            DataSet ds = new DataSet();
-            conexao3.Open();
-            if (conexao3.State == ConnectionState.Open)
-            {
-                txtIdPassagem.Text = comando3.ExecuteScalar().ToString();
-            }
+            SqlConnection conexao1 = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\João Paulo\Source\Repos\Projeto_Asp\Projeto_Asp\App_Data\BD.mdf;Integrated Security=True");
             
-
             //código para puxar id disponivel
             //string connection Thiago
-            /* SqlConnection conexao3 = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Thiago_2\Source\Repos\Projeto_Asp\Projeto_Asp\App_Data\BD.mdf;Integrated Security=True");
-             SqlCommand comando3 = new SqlCommand("SELECT  MAX(id_passagem +1) AS id_passagem from passagem", conexao3);
-             DataSet ds = new DataSet();
-             conexao3.Open();
-             if (conexao3.State == ConnectionState.Open)
-             {
-                 txtIdPassagem.Text= comando3.ExecuteScalar().ToString();
-             }
-             */
+            //SqlConnection conexao1 = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Thiago_2\Source\Repos\Projeto_Asp\Projeto_Asp\App_Data\BD.mdf;Integrated Security=True");
 
+
+            SqlCommand comando1 = new SqlCommand("SELECT  MAX(id_passagem +1) AS id_passagem from passagem", conexao1);
+            DataSet ds = new DataSet();
+            conexao1.Open();
+            if (conexao1.State == ConnectionState.Open)
+            {
+                txtIdPassagem.Text = comando1.ExecuteScalar().ToString();
+            }
         }
 
         protected void btnNovo_Click(object sender, EventArgs e)

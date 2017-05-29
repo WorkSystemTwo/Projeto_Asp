@@ -94,6 +94,42 @@ namespace Projeto_Asp {
         protected global::System.Web.UI.WebControls.TextBox txtValorPassagem;
         
         /// <summary>
+        /// lblOrigem control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblOrigem;
+        
+        /// <summary>
+        /// lblDestino control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblDestino;
+        
+        /// <summary>
+        /// lblHora control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblHora;
+        
+        /// <summary>
+        /// lblData control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblData;
+        
+        /// <summary>
         /// Label2 control.
         /// </summary>
         /// <remarks>
