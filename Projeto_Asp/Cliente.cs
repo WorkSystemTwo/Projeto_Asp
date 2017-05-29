@@ -112,6 +112,26 @@ namespace Projeto_Asp
             conexao.Close();
         }
 
+        //método para pesquisa de clientes (tela passagem)
+        public void pesquisaClienteSpecial(string pesquisa)
+        {
+            SqlCommand comando = new SqlCommand();
+            SqlDataReader reg = null;
+
+            comando.Connection = conexao;
+
+            comando.CommandText = "SELECT * FROM cliente WHERE nome LIKE '" + pesquisa + "%'";
+
+            conexao.Open();
+
+            reg = comando.ExecuteReader();
+
+            if (reg.Read())
+            {
+                cpf_cliente = reg["cpf_cliente"].ToString();
+            }
+            conexao.Close();
+        }
 
     }
 }

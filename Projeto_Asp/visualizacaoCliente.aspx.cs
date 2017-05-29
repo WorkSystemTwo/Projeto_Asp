@@ -101,6 +101,7 @@ namespace Projeto_Asp
                     txtCelular.Text = teste.celular;
                     txtRG.Text = teste.rg;
                     Label8.Text = "";
+                    txtPesquisaNome.Text = "";
                 }
                
                
@@ -108,6 +109,7 @@ namespace Projeto_Asp
             catch(Exception erro)
             {
                 Label8.Text = "Erro ao pesquisar cliente, " + erro.Message;
+                txtPesquisaNome.Text = "";
             }      
         }
     }

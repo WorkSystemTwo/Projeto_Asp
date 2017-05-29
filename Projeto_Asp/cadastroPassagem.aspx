@@ -32,7 +32,8 @@
 
         <asp:Label ID="Label3" runat="server" Text="Viagem :"></asp:Label>
         &nbsp;
-        <asp:ListBox ID="listViagem" runat="server" Height="25px" Width="278px" Enabled="False"></asp:ListBox>
+            <asp:DropDownList ID="listViagem" runat="server" Height="20px" Width="416px">
+            </asp:DropDownList>
         <br />
         <br />
 
@@ -50,14 +51,14 @@
 
         <asp:Label ID="Label2" runat="server" Text="Nome Cliente : " ReadOnly="true"></asp:Label>
         &nbsp;
-        <asp:TextBox ID="txtNomeCliente" runat="server" ReadOnly="true" Width="316px" Enabled="False"></asp:TextBox>
+        <asp:TextBox ID="txtNomeCliente" runat="server" Width="316px"></asp:TextBox>
         &nbsp;
-        <asp:Button ID="btnVerificar" runat="server" Text="Verificar Cliente" BorderStyle="None" Height="27px" Visible="False" />
+        <asp:Button ID="btnVerificar" runat="server" Text="Verificar Cliente" BorderStyle="None" Height="27px" Visible="False" OnClick="btnVerificar_Click" />
         <br />
         <br />
         <asp:Label ID="Label5" runat="server" Text="Confirmar CPF : " Visible="False"></asp:Label>
         &nbsp;
-        <asp:TextBox ID="txtCPF" runat="server" Enabled="False" Visible="False" Width="168px" ReadOnly="True"></asp:TextBox>
+        <asp:TextBox ID="txtCPF" runat="server" Visible="False" Width="168px" ReadOnly="True"></asp:TextBox>
 
         <br />
         <br />
@@ -69,6 +70,9 @@
             <asp:Button ID="btnSalvar" runat="server" Text="Salvar" Enabled="False" BorderStyle="None" Height="25px" OnClick="btnSalvar_Click"></asp:Button>
             &nbsp;
             <asp:Button ID="btnCancelar" runat="server" Text="Cancelar" Enabled="False" BorderStyle="None" Height="25px" OnClick="btnCancelar_Click"></asp:Button>
+
+            <br />
+            <asp:Label ID="lblMensagem" runat="server" Text="**"></asp:Label>
 
         </center>
         </div>

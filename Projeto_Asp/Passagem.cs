@@ -15,14 +15,14 @@ namespace Projeto_Asp
         public string id_passagem, id_viagem, cpf_cliente, vlr_passagem, poltrona;        
 
         //construtor para insercao de passagens
-        public Passagem(int id_viagem, string cpf_cliente, double vlr_passagem, int poltrona)
+        public Passagem(string id_viagem, string cpf_cliente, double vlr_passagem, int poltrona)
         {
 
             SqlCommand comando = new SqlCommand();
 
             comando.Connection = conexao;
 
-            comando.CommandText = "INSERT INTO passagem (id_viagem, cpf_cliente, vlr_passagem, poltrona) VALUES (@id_viagem, @cpf_cliente, @vlr_passagem, @poltrona";
+            comando.CommandText = "INSERT INTO passagem (id_viagem, cpf_cliente, vlr_passagem, poltrona) VALUES (@id_viagem, @cpf_cliente, @vlr_passagem, @poltrona)";
 
             comando.Parameters.AddWithValue("@id_viagem", id_viagem);
             comando.Parameters.AddWithValue("@cpf_cliente", cpf_cliente);

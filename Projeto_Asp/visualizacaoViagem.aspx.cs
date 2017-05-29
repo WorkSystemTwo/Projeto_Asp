@@ -81,16 +81,19 @@ namespace Projeto_Asp
                 if (rdId.Checked == true)
                 {                   
                     Viagem pesquisar = new Viagem();
-                    pesquisar.selectIDViagem(txtPesquisa.Text);
-                    
+                    pesquisar.selectIDViagem(txtPesquisa.Text);                    
 
-                        txtIdViagem.Text = pesquisar.id_viagem;
-                        txtHora.Text = pesquisar.hr_saida;
-                        txtObs.Text = pesquisar.obs;
-                        txtPrevChegada.Text = pesquisar.prev_chegada;
-                        txtData.Text = pesquisar.data_saida;
-                        txtDestino.Text = pesquisar.destino;
-                        txtOrigem.Text = pesquisar.origem;                    
+                    txtIdViagem.Text = pesquisar.id_viagem;
+                    txtHora.Text = pesquisar.hr_saida;
+                    txtObs.Text = pesquisar.obs;
+                    txtPrevChegada.Text = pesquisar.prev_chegada;
+                    txtData.Text = pesquisar.data_saida;
+                    txtDestino.Text = pesquisar.destino;
+                    txtOrigem.Text = pesquisar.origem;
+                    txtPesquisa.Text = "";
+                    rdDestino.Checked = false;
+                    rdId.Checked = false;
+                    rdOrigem.Checked = false;
                 }
                 else if (rdOrigem.Checked == true)
                 {
@@ -104,6 +107,10 @@ namespace Projeto_Asp
                     txtData.Text = pesquisar.data_saida;
                     txtDestino.Text = pesquisar.destino;
                     txtOrigem.Text = pesquisar.origem;
+                    txtPesquisa.Text = "";
+                    rdDestino.Checked = false;
+                    rdId.Checked = false;
+                    rdOrigem.Checked = false;
                 }
                 else if (rdDestino.Checked == true)
                 {
@@ -117,6 +124,10 @@ namespace Projeto_Asp
                     txtData.Text = pesquisar.data_saida;
                     txtDestino.Text = pesquisar.destino;
                     txtOrigem.Text = pesquisar.origem;
+                    txtPesquisa.Text = "";
+                    rdDestino.Checked = false;
+                    rdId.Checked = false;
+                    rdOrigem.Checked = false;
                 }
                 
             }

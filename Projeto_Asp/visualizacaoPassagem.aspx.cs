@@ -121,6 +121,7 @@ namespace Projeto_Asp
                         txtPoltrona.Text = pesquisa.poltrona;
                         txtVlrPassagem.Text = pesquisa.vlr_passagem;
                         rdCPF.Checked = false;
+                        txtPesquisa.Text = "";
 
                     }
                     else if (rdIDViagem.Checked == true)
@@ -134,6 +135,7 @@ namespace Projeto_Asp
                         txtPoltrona.Text = pesquisa2.poltrona;
                         txtVlrPassagem.Text = pesquisa2.vlr_passagem;
                         rdIDViagem.Checked = false;
+                        txtPesquisa.Text = "";
                     }
                 }
 

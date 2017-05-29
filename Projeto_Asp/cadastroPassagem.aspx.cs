@@ -13,28 +13,49 @@ namespace Projeto_Asp
 	{
 		protected void Page_Load(object sender, EventArgs e)
 		{
-            //carregamento de dados para inserção de passagens
-            SqlConnection conexao = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C: \Users\João Paulo\Source\Repos\Projeto_Asp\Projeto_Asp\App_Data\BD.mdf;Integrated Security=True");
-            SqlCommand comando = new SqlCommand();
-            comando.Connection = conexao;
-            SqlDataReader reg = null;
-            comando.CommandText = "SELECT  * FROM viagem ORDER BY data_saida";
-            conexao.Open();
-            reg = comando.ExecuteReader();
+            listViagem.Items.Clear();
 
-            //variaveis para salvar dados do banco
-
-            string destino, data_saida;
-
-            while (reg.Read())
+            try
             {
-                destino = (reg["destino"].ToString());
-                data_saida = (reg["data_saida"].ToString());
-                listViagem.Items.Add(destino.ToString() + " - " + data_saida.ToString());
+                //carregamento de dados para inserção de passagens
+
+                //string connection JP
+                //SqlConnection conexao = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\João Paulo\Source\Repos\Projeto_Asp\Projeto_Asp\App_Data\BD.mdf;Integrated Security=True");
+
+                //string connection THIAGAO
+                SqlConnection conexao = new SqlConnection(@"");
+
+                SqlCommand comando = new SqlCommand();
+                comando.Connection = conexao;
+                SqlDataReader reg = null;
+                comando.CommandText = "SELECT  * FROM viagem ORDER BY data_saida";
+                conexao.Open();
+                reg = comando.ExecuteReader();
+
+                //variaveis para salvar dados do banco
+
+                string destino, data_saida, hr_saida, id_viagem;
+
+                while (reg.Read())
+                {
+                    id_viagem = (reg["id_viagem"].ToString());
+                    destino = (reg["destino"].ToString());
+                    data_saida = (reg["data_saida"].ToString());
+                    hr_saida = (reg["hr_saida"].ToString());
+                    ListItem viagens = new ListItem(destino, id_viagem, true);
+                    listViagem.Items.Add(viagens);
+                }
+
+                conexao.Close();
             }
 
-            conexao.Close();
-		}
+            catch(Exception erro)
+
+            {
+                lblMensagem.Text = " Erro ao puxar dados,  " + erro.Message;
+            }
+
+        }
 
         protected void btnNovo_Click(object sender, EventArgs e)
         {
@@ -85,16 +106,30 @@ namespace Projeto_Asp
         {
             try
             {
-                Passagem insert = new Passagem(int.Parse(txtIdPassagem.Text), txtCPF.Text, double.Parse(txtValorPassagem.Text), int.Parse(txtPoltrona.Text));
-                Label6.Text = "Passagem inserido com sucesso!";
-                Label6.ForeColor = System.Drawing.Color.Green;
+                Passagem insert = new Passagem(listViagem.SelectedValue, txtCPF.Text, double.Parse(txtValorPassagem.Text), int.Parse(txtPoltrona.Text));
+                lblMensagem.Text = "Passagem inserido com sucesso!";
+                lblMensagem.ForeColor = System.Drawing.Color.Green;
                 salvar_cancelar();
             }
             catch(Exception erro)
             {
-                Label6.Text = "Erro ao inserir passagem!" + erro.Message;
+                lblMensagem.Text = "Erro ao inserir passagem!" + erro.Message;
             }
         }
-       
+
+        protected void btnVerificar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Cliente selectSpecial = new Cliente();
+                selectSpecial.pesquisaClienteSpecial(txtNomeCliente.Text);
+                txtCPF.Text = selectSpecial.cpf_cliente.ToString();
+            }
+            catch(Exception erro)
+            {
+                lblMensagem.Text = "Esse cliente não possui cadastro, " + erro.Message;
+            }
+
+        }
     }
 }
