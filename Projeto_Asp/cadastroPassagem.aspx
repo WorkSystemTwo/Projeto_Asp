@@ -30,10 +30,17 @@
         <br />
         <br />
 
-        <asp:Label ID="Label3" runat="server" Text="Viagem :"></asp:Label>
+        <asp:Label ID="Label7" runat="server" Text="Viagens Disponíveis :"></asp:Label>
         &nbsp;
-            <asp:DropDownList ID="listViagem" runat="server" Height="21px" Width="308px" Enabled="False">
-            </asp:DropDownList>
+        <asp:DropDownList ID="listDisponiveis" runat="server" Height="21px" Width="308px">
+        </asp:DropDownList>
+        <br />
+        <br />
+
+        <asp:Label ID="Label3" runat="server" Text="Viagem Escolhida :"></asp:Label>
+        &nbsp;
+        <asp:DropDownList ID="listViagem" runat="server" Height="21px" Width="308px" Enabled="False">
+        </asp:DropDownList>
         <br />
         <br />
 

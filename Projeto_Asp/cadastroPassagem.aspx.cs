@@ -14,6 +14,7 @@ namespace Projeto_Asp
 		protected void Page_Load(object sender, EventArgs e)
 		{
             listViagem.Items.Clear();
+            listDisponiveis.Items.Clear();
 
             try
             {
@@ -42,6 +43,7 @@ namespace Projeto_Asp
                     destino = (reg["destino"].ToString());
                     data_saida = (reg["data_saida"].ToString());
                     hr_saida = (reg["hr_saida"].ToString());
+                    listDisponiveis.Items.Add(id_viagem + " - " +destino + " - " + data_saida + " - " + hr_saida);                       
                     ListItem viagens = new ListItem(destino, id_viagem, true);
                     listViagem.Items.Add(viagens);
                 }
